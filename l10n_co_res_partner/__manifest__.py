@@ -44,8 +44,7 @@
         'l10n_co',
         'account',
         'purchase_stock',
-        'contacts',
-        'website_sale'
+        'contacts'
     ],
     'data': [
         'security/ir.model.access.csv',
