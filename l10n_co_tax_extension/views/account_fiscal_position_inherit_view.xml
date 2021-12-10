@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+
+            <record id="account_fiscal_position_inherit_view" model="ir.ui.view">
+              <field name="model">account.fiscal.position</field>
+              <field name="inherit_id" ref="account.view_account_position_form"/>
+              <field name="priority">9</field>              
+              <field name="arch" type="xml">
+                <xpath expr="//notebook" position="inside">
+                  <page name="taxes_in_invoice" string="Taxes in invoice">
+                    <group>
+                      <field name="tax_ids_invoice" widget="one2many_list" nolabel="1">
+                        <tree editable="bottom">
+                          <field name="tax_id" domain="[('tax_in_invoice','=',True)]" />
+                          <field name="account_journal_ids" widget="many2many_tags"/>
+                          <field name="amount" widget="monetary"/>
+                        </tree>
+                      </field>
+                    </group>
+                  </page>                  
+                </xpath>
+              </field>
+            </record>
+
+    </data>
+</odoo>

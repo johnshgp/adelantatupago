@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data>
+
+		<!--  Document Template Report
+					background
+					Boxed 
+					clean
+					standard
+		-->
+
+		<!-- background -->
+		<template id="external_layout_background_document_inherit" inherit_id="web.external_layout_background">
+			<xpath expr="//div[@class='float-left company_address']" position="replace">
+
+				<div class="float-left company_address" style="font-size:12px;">
+					<div>
+						<strong t-field="company.partner_id.name"/>
+					</div>
+					<span t-if="company.partner_id.formatedNit">NIT / DI: <span t-field="company.partner_id.formatedNit"/></span>
+					<span t-field="company.partner_id" t-options='{"widget": "contact", "fields": ["address"], "no_marker": true}'/>
+				</div>
+
+			</xpath>
+		</template>
+
+
+		<!-- Boxed -->
+		<template id="external_layout_boxed_document_inherit" inherit_id="web.external_layout_boxed">
+			<xpath expr="//div[@class='col-6 text-right mb4']" position="replace">
+
+					<div class="col-6 text-right mb4" style="font-size:12px;">
+							<h4 class="mt0" t-field="company.report_header"/>
+							<div name="company_address" class="mb4">
+									<span t-if="company.partner_id.formatedNit">NIT / DI: <span t-field="company.partner_id.formatedNit"/></span>
+									<span class="company_address" t-field="company.partner_id"
+											t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": true}'/>
+							</div>
+					</div>
+
+			</xpath>
+		</template>
+
+
+
+		<!-- clean -->
+		<template id="external_layout_clean_document_view_inherit" inherit_id="web.external_layout_clean">
+		  <xpath expr="//div[@class='col-5 offset-1']" position="replace">
+			<div class="col-5 offset-1" name="company_address" style="font-size:12px;">
+			  <ul class="list-unstyled">
+				<strong><li t-if="company.name"><span t-field="company.name"/></li></strong>
+				<li t-if="company.vat"><t t-esc="company.country_id.vat_label or 'Tax ID'"/>: <span t-field="company.vat"/></li>
+				<li t-if="company.partner_id.formatedNit">NIT: <span t-field="company.partner_id.formatedNit"/></li>
+				<li t-if="company.phone">Tel: <span t-field="company.phone"/></li>
+				<li t-if="company.email"><span t-field="company.email"/></li>
+				<li t-if="company.website"><span t-field="company.website"/></li>
+			  </ul>
+			</div>
+		  </xpath>
+		</template>
+
+		<!-- standard -->
+		<template id="external_layout_standard_document_view_inherit" inherit_id="web.external_layout_standard">
+		  <xpath expr="//div[@name='company_address']" position="replace">
+			
+			<div class="col-6" name="company_address" style="font-size:12px; margin-top:10px;">
+			  <div t-field="company.partner_id" t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": true}' />
+			  <span t-if="company.partner_id.formatedNit" style="display:inline-block;">
+				NIT: <span t-field="company.partner_id.formatedNit" />
+			  </span>
+			</div>
+
+		  </xpath>
+		</template> 
+
+
+		
+</data>
+</odoo>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+ 
+            <record id="account_fiscal_position_base_tax_form" model="ir.ui.view">
+              <field name="name">account.fiscal.position.base.tax.form</field>
+              <field name="model">account.fiscal.position.base.tax</field>
+              <field name="arch" type="xml">
+                <form>
+                  <group>
+                    <group>
+                      <field name="tax_id" />
+                    </group>
+                    <group>
+                      <field name="amount" />
+                    </group>
+                  </group>
+                </form>
+              </field>
+            </record>
+
+    </data>
+</odoo>

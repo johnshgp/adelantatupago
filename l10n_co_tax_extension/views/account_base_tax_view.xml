@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+
+        <record id="account_base_tax_form_view" model="ir.ui.view">
+          <field name="name">account.base.tax.form</field>
+          <field name="model">account.base.tax</field>
+          <field name="arch" type="xml">
+            <form string="Base taxes">
+              <group>
+                <group>
+                  <field name="start_date" />
+                  <field name="amount"/>
+                  <!--<field name="currency_id" invisible="1"/>-->
+                </group>
+                <group>
+                  <field name="end_date" />
+                </group>
+              </group>
+            </form>
+          </field>
+        </record>
+
+    </data>
+</odoo>
