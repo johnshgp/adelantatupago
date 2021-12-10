@@ -1,0 +1,13 @@
+id,name,l10n_co_document_code,country_id:id,is_vat,sequence
+no_identification,Sin Identificación,no_identification,base.co,False,1
+l10n_co.rut,NIT,rut,base.co,True,2
+l10n_co.national_citizen_id,Cédula de ciudadanía,national_citizen_id,base.co,False,3
+l10n_co.civil_registration,Registro Civil,civil_registration,base.co,False,4
+l10n_co.id_card,Tarjeta de Identidad,id_card,base.co,False,5
+l10n_latam_base.it_pass,Pasaporte,passport,,False,6,
+foreign_registration_card,Tarjeta de Registro Extranjero,21,,False,7
+l10n_latam_base.it_fid,Cédula Extranjera,foreign_id_card,,False,8
+l10n_co.external_id,ID del Exterior,external_id,,False,9
+l10n_co.diplomatic_card,Carné Diplomatico,diplomatic_card,base.co,False,9
+l10n_co.residence_document,Salvoconducto de Permanencia,residence_document,base.co,False,10
+without_foreign_id,Sin Identificación Extranjera,43,,False,11

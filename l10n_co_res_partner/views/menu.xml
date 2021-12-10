@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <!-- CIIU menu View-->
+    <menuitem action="action_ciiu_transaction"
+        id="menu_action_ciiu_transaction"
+        parent="account.account_account_menu" sequence="11"/>
+
+</odoo>

@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+		<record model="ir.ui.view" id="view_partner_form_inherit_l10n_latam_base">
+				<field name="name">view_partner_form_inherit_l10n_latam_base</field>
+				<field name="inherit_id" ref="l10n_latam_base.view_partner_latam_form"/>
+				<field name="model">res.partner</field>
+				<field name="priority">100</field>
+				<field name="arch" type="xml">
+					<xpath expr="//label[@for='l10n_latam_identification_type_id']" position="replace"/>
+					<field name="vat" position="replace"/>
+					<field name="l10n_latam_identification_type_id" position="replace"/>
+					<xpath expr="//span[@class='oe_read_only']" position="attributes">
+						<attribute name="invisible">True</attribute>
+					</xpath>
+				</field>
+		</record>
+
+
+		<!-- Extending Partner Form View -->
+		<record id="l10n_co_res_partner_view_form" model="ir.ui.view">
+			<field name="name">l10n_co_res_partner_view_form</field>
+			<field name="inherit_id" ref="base.view_partner_form"/>
+			<field name="model">res.partner</field>
+			<field name="priority">100</field>
+			<field name="arch" type="xml">
+
+				<!-- Hiding some fields that will be replaced partially or just set to invisible -->
+				<field name="name" position="after">
+					<field name="l10n_co_document_code" invisible='1'/>
+				</field>
+
+				<field name="vat" position="attributes">
+					<attribute name="invisible">True</attribute>
+				</field>
+
+				<field name="name" position="attributes">
+					<attribute name="invisible">True</attribute>
+				</field>
+
+				<field name="company_type" position="attributes">
+					<attribute name="invisible">True</attribute>
+				</field>
+
+				<field name="state_id" position="attributes">
+					<attribute name="invisible">True</attribute>
+				</field>
+
+				<field name="country_id" position="attributes">
+					<attribute name="invisible">True</attribute>
+				</field>
+
+				<!-- Dynamic Form which opens when creating a related contact to a company -->
+				<xpath expr="(//field[@name='city'])[4]" position="replace"></xpath>
+				<xpath expr="(//field[@name='state_id'])[4]" position="replace"></xpath>
+				<xpath expr="(//field[@name='country_id'])[4]" position="replace"></xpath>
+
+				<xpath expr="(//field[@name='zip'])[4]" position="after">
+						<field name="change_country" class="oe_edit_only"
+										attrs="{'invisible':[('change_country', '=', True)]}"/>
+
+						<field name="country_id"
+										attrs="{'readonly':[('change_country', '=', False)],
+											'required': [('state_id', '!=', False)]}"
+										options='{"no_open": True, "no_create": True}'
+										placeholder="Country" on_change="onchange_location(country_id, False)"
+										class="o_address_country" /> <!-- Country -->
+										
+						<field name="state_id"
+										options="{'no_open': True}"
+										placeholder="Department"
+										attrs="{'readonly':[('change_country', '=', False)], 
+											'invisible':[('country_id', '=', False)], 
+											'required': [('xcity', '!=', False)]}" on_change="onchange_location(False, state_id)" /> <!-- Department -->
+						<field name="xcity"
+										options="{'no_open': True}"
+										placeholder="City"
+										attrs="{'readonly':[('change_country', '=', False)], 'invisible':[('state_id', '=', False)]}" />  <!-- City / Municipality -->
+				</xpath>
+
+
+				<xpath expr="(//field[@name='name'])[4]" position="before">
+					<field name="is_company" invisible="1"/>
+					<field name="l10n_co_document_code" invisible='1'/>
+					<field name="pos_name" placeholder="Point of Sales Name or Direction" attrs="{'invisible':[('type', '!=', 'delivery')], 'required': [('type', '=', 'delivery')]}" />
+					<field name="x_name1"
+									placeholder="First Name" attrs="{'invisible':[('is_company', '=', True)], 'required': [('is_company', '=', False)]}" />
+					<field name="x_name2"
+									placeholder="Second Name" attrs="{'invisible':[('is_company', '=', True)]}" />
+					<field name="x_lastname1"
+									placeholder="Last Name" attrs="{'invisible':[('is_company', '=', True)], 'required': [('is_company', '=', False)]}" />
+					<field name="x_lastname2"
+									placeholder="Second Last Name" attrs="{'invisible':[('is_company', '=', True)]}" />
+					<field name="xbirthday" attrs="{'invisible':[('type', '=', 'delivery')]}" />
+
+					<field name="l10n_latam_identification_type_id" 
+						attrs="{'invisible':[('type', '=', 'delivery')]}" />
+					
+					<field name="vat"
+						placeholder="e.g. 900301230"
+						attrs="{'invisible':['|','|','|',('l10n_co_document_code', '=', '43'), ('l10n_co_document_code', '=', 'no_identification'), ('l10n_latam_identification_type_id', '=', False), ('type', '=', 'delivery')]}" />
+		
+					<field name="formatedNit"
+						attrs="{'invisible':[('l10n_co_document_code', '!=', 'rut')]}"
+						readonly="1" />
+					
+					<field name="dv" invisible="1" />
+					
+					<field name="x_pn_retri" attrs="{'invisible':[('type', '=', 'delivery')]}" />
+					
+					<field name="ciiu" attrs="{'invisible':[('type', '=', 'delivery')]}" domain="[('type', '=', 'other')]" />
+
+				</xpath>
+
+				<field name="type" position="before">
+					<field name="is_company" invisible="1"/>
+					<field name="personType"
+									attrs="{'readonly':[('company_type', '=', 'person')]}"/>
+					
+					
+					<label for="l10n_latam_identification_type_id" string="Identification Number"/>
+					<div name="identification_div">
+						<field name="l10n_latam_identification_type_id" 
+							options="{'no_open': True, 'no_create': True}" 
+							placeholder="Type" 
+							attrs="{'invisible':[('type', '=', 'delivery')]}"
+							class="oe_inline" 
+							domain="country_id and ['|', ('country_id', '=', False), ('country_id', '=', country_id)] or []" 
+							required="True"/>
+						<span class="oe_read_only"> - </span>
+						<field name="vat"
+							class="oe_inline"
+							placeholder="e.g. 900301230"
+							attrs="{'invisible':['|','|',('l10n_co_document_code', '=', '43'), ('l10n_co_document_code', '=', 'no_identification'), ('l10n_latam_identification_type_id', '=', False)]}" />
+					</div>
+					<field name="formatedNit"
+						attrs="{'invisible':[('l10n_co_document_code', '!=', 'rut')]}"
+						readonly="1" />
+					<field name="dv" invisible="1" />
+					<field name="companyName"
+									placeholder="Name of the Company"
+									attrs="{'invisible':['|',('personType', '=', 1),('company_type', '=', 'person')], 'required': [('personType', '=', 2)]}" />
+					<field name="companyBrandName"
+									placeholder="Brand Name of the Company?"
+									attrs="{'invisible':['|',('personType', '=', 1),('company_type', '=', 'person')]}" />
+					<field name="pos_name" placeholder="Point of Sales Name or Direction" attrs="{'invisible':[('type', '!=', 'delivery')], 'required': [('type', '=', 'delivery')]}" />
+					<field name="x_name1"
+									placeholder="First Name"
+									default_focus="1"
+									attrs="{'invisible':[('is_company', '=', True)], 'required': [('is_company', '=', False)]}" />
+					<field name="x_name2"
+									placeholder="Second Name"
+									attrs="{'invisible':[('is_company', '=', True)]}" />
+					<field name="x_lastname1"
+									placeholder="Last Name"
+									attrs="{'invisible':[('is_company', '=', True)], 'required': [('is_company', '=', False)]}" />
+					<field name="x_lastname2"
+									placeholder="Second Last Name"
+									attrs="{'invisible':[('is_company', '=', True)]}"  />
+					<field name="xbirthday" attrs="{'invisible':[('is_company', '=', True)]}" />
+					<field name="x_pn_retri" attrs="{'invisible':[('type', '=', 'delivery')]}" />
+					<field name="ciiu" attrs="{'invisible':[('type', '=', 'delivery')]}"  domain="[('type', '=', 'other')]" />
+				</field>
+
+				<!-- Adding some more relevant fields to the form view -->
+				<field name="company_type" position="after">
+					<field invisible="1"
+						name="company_type"
+						widget="radio"
+						class="oe_edit_only"
+						options="{'horizontal': true}"/>
+
+					<field name="is_company" class="oe_inline" modifiers="{}"/>
+					<label for="is_company" string="Is it a Company?"/>
+				</field>
+
+				<field name="parent_id" position="before">
+					<h3>
+						<field
+							name="name"
+							attrs="{'invisible':[('x_name1', '=', ''),('companyName', '=', False)]}"
+							placeholder="Don't touch! Field will be filled up automatically!" />
+					</h3>
+				</field>
+
+				<field name="website" position="before">
+
+					<field name="change_country" class="oe_edit_only"
+							attrs="{'invisible':[('change_country', '=', True)]}"/>
+
+					<field name="country_id"
+						attrs="{'readonly':[('change_country', '=', False)], 
+							'required': [('state_id', '!=', False)]}"
+						options='{"no_open": True, "no_create": True}'
+						placeholder="Country" on_change="onchange_location(country_id, False)"
+						class="o_address_country" /> 
+
+					<field name="state_id"
+						options="{'no_open': True}"
+						placeholder="Department"
+						attrs="{'readonly':[('change_country', '=', False)], 'invisible':[('country_id', '=', False)], 'required': [('xcity', '!=', False)]}" on_change="onchange_location(False, state_id)" /> <!-- Department -->
+		
+					<field name="xcity"
+						options="{'no_open': True}"
+						placeholder="City"
+						attrs="{'readonly':[('change_country', '=', False)], 'invisible':[('state_id', '=', False)]}" />  <!-- City / Municipality -->
+	
+				</field>
+
+				<field name="city" position="attributes">
+					<attribute name="invisible">True</attribute>
+				</field>
+
+			</field>
+		</record>
+
+		<!-- Extending the Partner Tree view -->
+		<record id="l10n_co_res_partner_view_tree" model="ir.ui.view">
+			<field name="name">l10n_co_res_partner_view_tree</field>
+			<field name="inherit_id" ref="base.view_partner_tree"/>
+			<field name="model">res.partner</field>
+			<field name="priority">100</field>
+			<field name="arch" type="xml">
+				<xpath expr="//tree" position="attributes">
+					<attribute name="decoration-bf">l10n_co_document_code=='43'</attribute>
+					<attribute name="decoration-bf">l10n_co_document_code=='no_identification'</attribute>
+					<attribute name="decoration-danger">vat==False</attribute>
+					<attribute name="decoration-danger">vat==''</attribute>
+				</xpath>
+				<field name="phone" position="before">
+					<field name="l10n_latam_identification_type_id" invisible="1" />
+					<field name="l10n_co_document_code" invisible="1" />
+					<field name="vat" string="Identification" />
+				</field>
+			</field>
+		</record>
+
+
+    <!-- Extending the Search: Making document number searchable-->
+    <record id="l10n_co_res_partner_view_search" model="ir.ui.view">
+        <field name="name">l10n_co_res_partner_view_search</field>
+		<field name="inherit_id" ref="base.view_res_partner_filter"/>
+		<field name="model">res.partner</field>
+		<field name="priority">100</field>
+		<field name="arch" type="xml">
+			<field name="name" position="replace">
+				<field name="name" filter_domain="['|',('display_name','ilike',self), ('vat','ilike',self)]" />
+			</field>
+		</field>
+    </record>
+
+
+		<!-- Extending the Partner Kanban view -->
+    <record model="ir.ui.view" id="l10n_co_res_partner_view_kanban">
+        <field name="name">l10n_co_res_partner_view_kanban</field>
+        <field name="inherit_id" ref="base.res_partner_kanban_view"/>
+        <field name="model">res.partner</field>
+		<field name="priority">100</field>
+        <field name="arch" type="xml">
+            <xpath expr="//kanban/templates/t[@t-name='kanban-box']/div[@class='oe_kanban_global_click o_kanban_record_has_image_fill o_res_partner_kanban']/div[@class='oe_kanban_details d-flex flex-column']/ul" position="before">
+                <field name="l10n_co_document_code" invisible="1"/>
+                <div attrs="{'invisible':[('vat', '=', False)]}">
+                    Document: <field name="vat" />
+                </div>
+                <div t-if="record.l10n_co_document_code.raw_value != 'no_identification'">
+                    <div t-if="record.l10n_co_document_code.raw_value != '43'">
+                        <div t-if="!record.vat.raw_value" style="margin: 0px; padding:3px 3px 10px 3px; color:#F77171; background-color: #FFF3F3;">
+                            <b>Information is incomplete!</b><br/> Please update soon!
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
