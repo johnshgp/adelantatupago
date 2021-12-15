@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+	<record model="ir.ui.view" id="import_invoices_view_form">
+		<field name="name">import.invoices.view.form</field>
+		<field name="model">import.invoices</field>
+		<field name="arch" type="xml">
+			<form string="Importar Facturas">
+				<header>
+					<button name="btn_process" type="object" string="Procesar" states="draft" />
+					<field name="state" widget="statusbar" />
+				</header>
+				<sheet>
+					<group>
+						<field name="name" />
+						<field name="invoices_file" widget="binary"/>
+						<field name="delimiter" />
+						<field name="skip_first_line" />
+					</group>
+					<notebook>
+						<page string="Contenido" >
+							<field name="file_content" readonly="1"/>
+						</page>
+						<page string="No procesadas">
+							<field name="not_processed_content" readonly="1"/>
+						</page>
+                        <page string="Facturas Cargadas">
+                                <field name="facturas_creadas" readonly="1"/>
+                        </page>
+					</notebook>
+				</sheet>
+			</form>
+		</field>
+	</record>
+
+	<record model="ir.ui.view" id="import_invoices_tree">
+		<field name="name">import.invoices.view.tree</field>
+		<field name="model">import.invoices</field>
+		<field name="arch" type="xml">
+		<tree string="Import Invoices">
+			<field name="name" />
+			<field name="invoices_file" />
+			<field name="state" />
+		</tree>
+		</field>
+	</record>
+
+	<record model="ir.actions.act_window" id="action_import_invoices">
+		<field name="name">Cargar Facturas</field>
+		<field name="res_model">import.invoices</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+
+
+	<menuitem name="Carga de Facturas" id="carga_facturas_menu"
+		parent="account.menu_finance_receivables"
+		action="action_import_invoices"
+		sequence="101"/>
+
+</odoo>
