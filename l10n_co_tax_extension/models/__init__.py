@@ -40,7 +40,7 @@ from . import account_tax_inherit
 from . import ir_sequence
 from . import ir_sequence_dian_resolution
 from . import sale_order_inherit
-from . import purchase_order_line_inherit
+#from . import purchase_order_line_inherit
 from . import res_partner_inherit
 
 #from . import sale_make_invoice_advance_inherit
