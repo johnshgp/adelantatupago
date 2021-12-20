@@ -43,7 +43,6 @@
         'base_address_city',
         'l10n_co',
         'account',
-        'purchase_stock',
         'contacts'
     ],
     'data': [
