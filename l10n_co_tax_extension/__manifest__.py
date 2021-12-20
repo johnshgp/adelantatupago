@@ -47,7 +47,6 @@ Impuestos Colombia:
 	'depends': [
 		'account',
 		'sale',
-		'purchase',
 		'l10n_co_res_partner',
 		'web'
 	],
