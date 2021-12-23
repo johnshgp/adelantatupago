@@ -118,7 +118,7 @@ class ImportInvoices(models.Model):
                     if client_tercero_tmp: vals['tercero_relacionado'] = client_tercero_tmp.id
                     if cliente_tmp: vals['partner_id'] = cliente_tmp.id
 
-                    factura = self.env['account.move'].create(vals)
+                    factura = self.env['account.move'].sudo().create(vals)
                     
                     _procesados += "{} \n".format(documento)
                 else:
