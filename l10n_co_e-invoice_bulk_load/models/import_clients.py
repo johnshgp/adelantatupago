@@ -204,7 +204,7 @@ class ImportClients(models.Model):
 
                     if telefono != '': vals['phone'] = telefono
                     if mobil != '': vals['mobile'] = mobil
-                    self.env['res.partner'].create(vals)
+                    self.env['res.partner'].sudo().create(vals)
                     _procesados += "{} \n".format(vat_client)
                 else:
                     _noprocesados += "{} \n".format(vat_client)
