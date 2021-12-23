@@ -4,7 +4,7 @@
 	'version': '14.0',
     'author': 'Ivan Arriola - Autodidacta TI',
 	'category': 'Tools',
-	'summary': 'Actualizacion precios por archivo',
+	'summary': 'Carga de facturas y clientes por CSV',
     'license': 'OPL-1',
     'website': 'https://autodidactati.com',
 	'depends': ['account','contacts','l10n_co_res_partner'],
