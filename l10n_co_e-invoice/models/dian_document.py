@@ -266,6 +266,7 @@ class DianDocument(models.Model):
         except:
             raise ValidationError('No existe comunicación con la DIAN para el servicio de recepción de Facturas Electrónicas. Por favor, revise su red o el acceso a internet.')
         #   Respuesta de petición
+        
         if response.status_code != 200: # Respuesta de envío no exitosa
             if response.status_code == 500:
                 raise ValidationError('Error 500 = Error de servidor interno.')
@@ -359,7 +360,7 @@ class DianDocument(models.Model):
         except:
             raise ValidationError('No existe comunicación con la DIAN para el servicio de recepción de Facturas Electrónicas. Por favor, revise su red o el acceso a internet.')
         #   Respuesta de petición
-        raise ValidationError(str(response))
+        raise ValidationError(str(response.content))
         if response.status_code != 200: # Respuesta de envío no exitosa
             if response.status_code == 500:
                 raise ValidationError('Error 500 = Error de servidor interno.')
