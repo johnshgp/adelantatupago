@@ -91,9 +91,9 @@
                 </xpath>
 
 
-                <xpath expr="//div[@name='journal_div']" position="after">
+                <field name="invoice_user_id" position="after">
                     <field name="validate_cron"/>
-                </xpath>
+                </field>
             </field>
     </record>
 

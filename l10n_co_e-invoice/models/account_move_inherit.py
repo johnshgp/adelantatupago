@@ -249,9 +249,9 @@ class AccountMoveInherit(models.Model):
                     print(self.journal_id.debit_note_sequence_id)
                     if sequence_code == False:
                         raise ValidationError('Debe definir el código de secuencia de la nota de débito en Ajuste / Técnico / Secuencia')
-                    self.number = rec_sequence_nd.next_by_code(sequence_code)
-                    self.move_name = self.number
-                    self.name = self.number
+                    number = rec_sequence_nd.next_by_code(sequence_code)
+                    #self.move_name = number
+                    self.name = number
 
                 rec_resolution_invoice = self.journal_id.secure_sequence_id.dian_resolution_ids.filtered(lambda r: r.active_resolution == True)
                 # Verifica datos de la resolucion DIAN

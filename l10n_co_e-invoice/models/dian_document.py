@@ -192,7 +192,7 @@ class DianDocument(models.Model):
     @api.model
     def _get_resolution_dian(self, data_header_doc):
         #rec_active_resolution = self.env['ir.sequence.dian_resolution'].search([('resolution_number', '=', data_header_doc.resolution_number)])
-        rec_active_resolution = data_header_doc.journal_id.secure_sequence_id.dian_resolution_ids.filtered(lambda r: r.active_resolution == True)
+        rec_active_resolution = data_header_doc.journal_id.sequence_id.dian_resolution_ids.filtered(lambda r: r.active_resolution == True)
         dict_resolution_dian = {}
         if rec_active_resolution:
             rec_dian_sequence = self.env['ir.sequence'].search([('id', '=', rec_active_resolution.sequence_id.id)])
@@ -914,7 +914,7 @@ class DianDocument(models.Model):
         dian_constants['PINSoftware'] = company.software_pin
         dian_constants['SeedCode'] = company.seed_code
         dian_constants['UBLVersionID'] = 'UBL 2.1'  # Versión base de UBL usada. Debe marcar UBL 2.0
-        if data_header_doc.type == 'out_invoice':
+        if data_header_doc.move_type == 'out_invoice':
             dian_constants['ProfileID'] = 'DIAN 2.1: Factura Electrónica de Venta'
         elif data_header_doc.is_debit_note:
             dian_constants['ProfileID'] = 'DIAN 2.1: Nota Débito de Factura Electrónica de Venta'
@@ -923,7 +923,7 @@ class DianDocument(models.Model):
 
         # Versión del Formato: Indicar versión del documento. Debe usarse "DIAN 1.0"
         dian_constants['CustomizationID'] = company.operation_type
-        if data_header_doc.type == 'out_refund':
+        if data_header_doc.move_type == 'out_refund':
             dian_constants['CustomizationID'] = '20'
         if data_header_doc.is_debit_note:
             dian_constants['CustomizationID'] = '30'
@@ -994,7 +994,7 @@ class DianDocument(models.Model):
         data_constants_document['StartDate'] = data_resolution['StartDate']                                                 # Fecha desde resolución
         data_constants_document['EndDate'] = data_resolution['EndDate']                                                     # Fecha hasta resolución
         data_constants_document['Prefix'] = data_resolution['Prefix']                                                       # Prefijo de número de factura
-        if data_header_doc.type != 'out_invoice':
+        if data_header_doc.move_type != 'out_invoice':
             data_constants_document['Prefix'] = data_resolution['PrefixNC']
 
         data_constants_document['From'] = data_resolution['From']                                                           # Desde la secuencia

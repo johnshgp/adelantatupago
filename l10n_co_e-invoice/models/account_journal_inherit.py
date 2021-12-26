@@ -60,15 +60,15 @@ class AccountJournalInherit(models.Model):
 	@api.model
 	def _create_sequence_debit_note(self, vals, debitnote=False):
 		""" Create new no_gap entry sequence for every new Journal"""
-		prefix = self._get_sequence_prefix(vals['code'], debitnote)
 		seq_name = debitnote and vals['code'] + _(': Debit note') or vals['code']
 		seq = {
 			'name': _('%s Sequence') % seq_name,
 			'implementation': 'no_gap',
-			'prefix': prefix,
+			'prefix': 'ND',
 			'padding': 4,
 			'number_increment': 1,
 			'use_date_range': True,
+			'code' : 'nota_debito.sequence'
 		}
 		if 'company_id' in vals:
 			seq['company_id'] = vals['company_id']
