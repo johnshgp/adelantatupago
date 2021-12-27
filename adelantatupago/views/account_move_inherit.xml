@@ -11,7 +11,7 @@
 
                 <button name="action_register_payment" position="after">
                     <field name="pago_tercero_creado" invisible="1" />
-                    <button string="Pasar pago a tercero" type="object" class="oe_highlight" name="pago_tercero" attrs="{'invisible':['|',('move_type','=','entry'),('pago_tercero_creado','=',True)]}"/>
+                    <button string="Pasar pago a tercero" type="object" class="oe_highlight" name="pago_tercero" attrs="{'invisible':['|','|',('move_type','=','entry'),('pago_tercero_creado','=',True),('tercero_relacionado','=',False)]}"/>
 
                 </button>
             
