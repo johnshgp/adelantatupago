@@ -7,7 +7,7 @@
 	'summary': 'Cuenta por cobrar de cliente a tercero',
     'license': 'OPL-1',
     'website': 'https://autodidactati.com',
-	'depends': ['account','contacts','l10n_co_e-invoice'],
+	'depends': ['account','contacts','l10n_co_e-invoice','l10n_co_e-invoice_bulk_load'],
 	'data': [
 		'security/ir.model.access.csv',
 		'views/account_move_inherit.xml',
