@@ -32,7 +32,7 @@ class ImportClients(models.Model):
             if self.skip_first_line and i == 0:
                 continue
             lista = line.split(self.delimiter)
-            if len(lista) == 17:
+            if len(lista) > 17:
                 is_company = lista[0]
                 personType = lista[1]
                 l10n_latam_identification_type_id = lista[2]
@@ -47,10 +47,10 @@ class ImportClients(models.Model):
                 cp_client = lista[11]
                 pais_client = lista[12]
                 rfiscal = lista[13]
-
-                tributos = lista[14]
-                telefono = lista[15]
-                mobil = lista[16]
+                cuenta_por_cobrar = lista[14]
+                tributos = lista[15]
+                telefono = lista[16]
+                mobil = lista[17]
 
                 vals.clear()
 
@@ -185,6 +185,16 @@ class ImportClients(models.Model):
                             raise ValidationError("El CSV no se procesara por que no se encuentra Responsabilidad Fiscal {0} en la linea {1}, contenido de linea: {2}".format(rfiscal, i, line))
 
                         if tmp_fiscal_id != 0: vals['fiscal_responsability_ids'] = [(4,tmp_fiscal_id)]
+
+                    if cuenta_por_cobrar != '':
+                        ccobrar_id = self.env['account.account'].search([('code','=', cuenta_por_cobrar)]).id
+                        if ccobrar_id:
+                            vals['property_account_receivable_id'] = ccobrar_id
+                        else:
+                            raise ValidationError("El CSV no se procesara por que no se encuentra Cuenta por Cobrar {0} en la linea {1}, contenido de linea: {2}".format(cuenta_por_cobrar, i, line))
+                    else:
+                        raise ValidationError("El CSV no se procesara por que no se encuentra Cuenta por Cobrar {0} en la linea {1}, contenido de linea: {2}".format(cuenta_por_cobrar, i, line))
+
                             
 
                     # Seleccion de Tributo
@@ -209,7 +219,7 @@ class ImportClients(models.Model):
                 else:
                     _noprocesados += "{} \n".format(vat_client)
             else:
-                raise ValidationError("El CSV no se procesara por estar mal formado en la linea {0}, contenido de linea: {1}".format(i, line))
+                raise ValidationError("El CSV no se procesara por estar mal formado en la linea {0}, contenido de linea: {1}. Se necesitan al menos 18 columnas".format(i, line))
         self.clientes_creados = _procesados
         self.not_processed_content = _noprocesados
         self.state = 'processed'
