@@ -2,7 +2,7 @@
 {
 	'name': 'Adelanta tu pago',
 	'version': '14.0',
-    'author': 'Ivan Arriola - Autodidacta TI',
+    'author': 'Ivan Arriola - Autodidacta-TI',
 	'category': 'Tools',
 	'summary': 'Cuenta por cobrar de cliente a tercero',
     'license': 'OPL-1',
