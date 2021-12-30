@@ -12,6 +12,7 @@
 		'security/ir.model.access.csv',
 		'views/account_move_inherit.xml',
 		'views/account_payment_inherit.xml',
+		'views/import_payments_view.xml',
 		'wizards/res_config_settings_views.xml'
 	],
 	'demo': [
