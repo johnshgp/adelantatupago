@@ -24,7 +24,7 @@ class AccountMoveInherit(models.Model):
                 cuenta = self.env['account.account'].browse(line.account_id.id)
 
         #Diario a utilizar
-        diario = self.env['account.journal'].browse(int(self.env['ir.config_parameter'].get_param('adelantatupago.journal_def')))
+        diario = self.env['account.journal'].browse(int(self.env['ir.config_parameter'].sudo().get_param('adelantatupago.journal_def')))
 
         line_cliente =(0, 0, {'account_id': cuenta.id,
                         'partner_id': self.partner_id.id,
