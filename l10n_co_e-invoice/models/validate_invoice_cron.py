@@ -22,7 +22,7 @@ class ValidateInvoiceCron(models.TransientModel):
             idian.validate_dian()
             if idian.pago_tercero_creado == False and idian.state_dian_document == 'Exitoso':
                 idian.pago_tercero()
-            elif i.state_dian_document == 'Por validar':
+            elif idian.state_dian_document == 'Por validar':
                 idian.validate_dian()
                 if idian.pago_tercero_creado == False and idian.state_dian_document == 'Exitoso':
                     idian.pago_tercero()
