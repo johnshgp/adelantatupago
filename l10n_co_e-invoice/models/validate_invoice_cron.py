@@ -32,14 +32,11 @@ class ValidateInvoiceCron(models.TransientModel):
                     
                     
         inv_to_validate_dian_false = self.env['account.move'].sudo().search([('validate_cron','=',True),('state','=','posted'),('diancode_id.state','=',False)])
-        #for idianf in inv_to_validate_dian_false:
-        #    idianf.validate_dian()
-        #    if idianf.pago_tercero_creado == False and idianf.state_dian_document == 'exitoso':
-        #        idianf.pago_tercero()
-        #    elif idianf.state_dian_document == 'por_validar':
-        #        idianf.validate_dian()
-        #        if idianf.pago_tercero_creado == False and idianf.state_dian_document == 'exitoso':
-        #            idianf.pago_tercero()
-        invoice = self.env['account.move'].sudo().browse(16)
-        _logger.warning('inv_to_validate: {0}, inv_to_validate_dian: {1}, idianf: {2}********** Factura: {3}, state_dian{4}, state{5} '.format(inv_to_validate,inv_to_validate_dian,inv_to_validate_dian_false,invoice.name,invoice.diancode_id.state,invoice.state))                  
+        sql = "select am.id from account_move am, dian_document dd where am.validate_cron is true and am.state = 'posted' and dd.document_id = am.id and dd.state != 'exitoso';"
+        self.env.cr.execute(sql)
+        sql_result = self.env.cr.dictfetchall()
+        
+        
+        ids_invoice = self.env['account.move'].sudo().browse([n.get('id') for n in sql_result])
+        _logger.warning('inv_to_validate: {0}, inv_to_validate_dian: {1}, idianf: {2}********** Facturas: {3}'.format(inv_to_validate,inv_to_validate_dian,inv_to_validate_dian_false,ids_invoice))                  
   
