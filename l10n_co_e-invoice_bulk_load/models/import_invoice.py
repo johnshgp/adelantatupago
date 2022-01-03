@@ -32,7 +32,7 @@ class ImportInvoices(models.Model):
             if self.skip_first_line and i == 0:
                 continue
             lista = line.split(self.delimiter)
-            if len(lista) == 7:
+            if len(lista) > 6:
                 rs_nomina = lista[0]
                 nit_nomina = lista[1]
                 tipo_persona = lista[2]
