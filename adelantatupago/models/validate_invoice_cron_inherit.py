@@ -5,8 +5,8 @@ _logger = logging.getLogger(__name__)
 class ValidateInvoiceCronInherit(models.TransientModel):
     _inherit = "validate.invoice.cron"
 
-    def validate_invoice_payments(self):
-        result = super(ValidateInvoiceCronInherit, self).validate_invoice_payments()
+    def validate_invoice(self):
+        result = super(ValidateInvoiceCronInherit, self).validate_invoice()
         inv_to_payments = self.env['account.move'].search([('validate_cron','=',True),('state','=','posted'),('pago_tercero_creado','=',False)])
         for i in inv_to_payments:
             if i.state_dian_document == 'exitoso':
