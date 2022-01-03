@@ -19,8 +19,12 @@ class ValidateInvoiceCron(models.TransientModel):
                 i.validate_dian()
                 if i.state_dian_document == 'exitoso':
                     i.pago_tercero()
+                    
+        sql = "select am.id from account_move am, dian_document dd where am.validate_cron is true and am.state = 'posted' and dd.document_id = am.id and dd.state != 'exitoso';"
+        self.env.cr.execute(sql)
+        sql_result = self.env.cr.dictfetchall()
 
-        inv_to_validate_dian = self.env['account.move'].sudo().search([('validate_cron','=',True),('state','=','posted'),('state_dian_document','!=','exitoso')])
+        inv_to_validate_dian = self.env['account.move'].sudo().browse([n.get('id') for n in sql_result])
         for idian in inv_to_validate_dian:
             idian.validate_dian()
             if idian.pago_tercero_creado == False and idian.state_dian_document == 'exitoso':
@@ -29,14 +33,7 @@ class ValidateInvoiceCron(models.TransientModel):
                 idian.validate_dian()
                 if idian.pago_tercero_creado == False and idian.state_dian_document == 'exitoso':
                     idian.pago_tercero()
-                    
-                    
-        inv_to_validate_dian_false = self.env['account.move'].sudo().search([('validate_cron','=',True),('state','=','posted'),('diancode_id.state','=',False)])
-        sql = "select am.id from account_move am, dian_document dd where am.validate_cron is true and am.state = 'posted' and dd.document_id = am.id and dd.state != 'exitoso';"
-        self.env.cr.execute(sql)
-        sql_result = self.env.cr.dictfetchall()
         
         
-        ids_invoice = self.env['account.move'].sudo().browse([n.get('id') for n in sql_result])
-        _logger.warning('inv_to_validate: {0}, inv_to_validate_dian: {1}, idianf: {2}********** Facturas: {3}'.format(inv_to_validate,inv_to_validate_dian,inv_to_validate_dian_false,ids_invoice))                  
+        _logger.warning('inv_to_validate: {0}, inv_to_validate_dian: {1}'.format(inv_to_validate,inv_to_validate_dian))                  
   
