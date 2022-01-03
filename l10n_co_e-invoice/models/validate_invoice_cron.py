@@ -18,7 +18,7 @@ class ValidateInvoiceCron(models.TransientModel):
                 if i.state_dian_document == 'Exitoso':
                     i.pago_tercero()
 
-        inv_to_validate_dian = self.env['account.move'].search([('validate_cron','=',True),('state','=','posted'),('state_dian_document','!=','Existoso')])
+        inv_to_validate_dian = self.env['account.move'].search([('validate_cron','=',True),('state','=','posted'),('state_dian_document','!=','Exitoso')])
         for idian in inv_to_validate_dian:
             idian.validate_dian()
             if idian.pago_tercero_creado == False and idian.state_dian_document == 'Exitoso':
