@@ -123,6 +123,8 @@ class ImportInvoices(models.Model):
                     _procesados += "{} \n".format(documento)
                 else:
                     _noprocesados += "{} \n".format(documento)
+            elif len(lista) == 1:
+                continue
             else:
                 raise ValidationError("El CSV no se procesara por estar mal formado en la linea {0}, contenido de linea: {1}".format(i, line))
         self.facturas_creadas = _procesados
