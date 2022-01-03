@@ -562,7 +562,7 @@ class DianDocument(models.Model):
                 doc_send_dian.date_document_dian = data_constants_document['IssueDateSend']
                 # Id de pruebas
                 testSetId = company.identificador_set_pruebas
-                raise ValidationError(testSetId)
+                
                 identifierSecurityToken = uuid.uuid4()
                 identifierTo = uuid.uuid4()            
                 # Preparación del envío de la factura 
