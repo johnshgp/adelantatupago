@@ -27,5 +27,16 @@ class ValidateInvoiceCron(models.TransientModel):
                 idian.validate_dian()
                 if idian.pago_tercero_creado == False and idian.state_dian_document == 'exitoso':
                     idian.pago_tercero()
-        raise ValidationError('inv_to_validate: {0}, inv_to_validate_dian: {1}'.format(inv_to_validate,inv_to_validate_dian))                  
+                    
+                    
+        inv_to_validate_dian_false = self.env['account.move'].search([('validate_cron','=',True),('state','=','posted'),('state_dian_document','=',False)])
+        for idianf in inv_to_validate_dian_false:
+            idianf.validate_dian()
+            if idianf.pago_tercero_creado == False and idianf.state_dian_document == 'exitoso':
+                idianf.pago_tercero()
+            elif idianf.state_dian_document == 'por_validar':
+                idianf.validate_dian()
+                if idianf.pago_tercero_creado == False and idianf.state_dian_document == 'exitoso':
+                    idianf.pago_tercero()
+        raise ValidationError('inv_to_validate: {0}, inv_to_validate_dian: {1}, idianf{2}: '.format(inv_to_validate,inv_to_validate_dian,inv_to_validate_dian_false))                  
   
