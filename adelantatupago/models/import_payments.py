@@ -102,6 +102,8 @@ class ImportPayments(models.Model):
                 else:
                     _noprocesados += "{} \n".format(doc_empleado + " $" + str(importe))
 
+            elif len(lista) == 1:
+                continue
             else:
                 raise ValidationError("El CSV no se procesara por estar mal formado en la linea {0}, contenido de linea: {1}".format(i, line))
                 
