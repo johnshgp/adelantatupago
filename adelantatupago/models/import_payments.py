@@ -32,7 +32,7 @@ class ImportPayments(models.Model):
             if self.skip_first_line and i == 0:
                 continue
             lista = line.split(self.delimiter)
-            if len(lista) == 6:
+            if len(lista) > 5:
 
                 dato = lista[0]
                 doc_empleado = lista[1]
