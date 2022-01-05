@@ -45,3 +45,18 @@ class AccountPaymentInherit(models.Model):
                 account.action_post()
 
         return result
+    
+    def action_draft(self):
+        for rec in self:
+            result = super(AccountPaymentInherit, rec).action_draft()
+            if rec.empleador:
+                #asiento a cancelar
+                amcancel = rec.env['account.move'].search([('ref','=',rec.name),('state','=','posted')])
+
+                if len(amcancel) > 0:
+                    # se pasa asiento a borrador
+                    amcancel.button_draft()
+                    # se pasa asiento a cancelado
+                    amcancel.button_cancel()
+
+        return result    
