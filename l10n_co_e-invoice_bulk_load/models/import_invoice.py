@@ -99,8 +99,15 @@ class ImportInvoices(models.Model):
                                     'product_id': producto_tmp.id, 
                                     'quantity': 1, 
                                     'product_uom_id': producto_tmp.uom_id.id,
+                                    'price_unit': precio})
+
+                    if len(producto_tmp.taxes_id) > 0:
+                        line =(0, 0, {'account_id': 176,
+                                    'product_id': producto_tmp.id, 
+                                    'quantity': 1, 
+                                    'product_uom_id': producto_tmp.uom_id.id,
                                     'price_unit': precio,
-                                    'tax_ids': [(4, producto_tmp.taxes_id.id)],})
+                                    'tax_ids': [(4, producto_tmp.taxes_id.id)]})
                     
                     move_line_vals.append(line)
                     vals = {
