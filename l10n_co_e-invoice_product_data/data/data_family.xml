@@ -1,0 +1,1687 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data noupdate="1">
+
+		<record id="dian_unspsc_family_1" model="dian.unspsc.family">
+			<field name="family">1010</field>
+			<field name="name">Animales vivos</field>
+		</record>
+		<record id="dian_unspsc_family_2" model="dian.unspsc.family">
+			<field name="family">1011</field>
+			<field name="name">Productos para animales domésticos</field>
+		</record>
+		<record id="dian_unspsc_family_3" model="dian.unspsc.family">
+			<field name="family">1012</field>
+			<field name="name">Comida de animales</field>
+		</record>
+		<record id="dian_unspsc_family_4" model="dian.unspsc.family">
+			<field name="family">1013</field>
+			<field name="name">Recipientes y hábitat para animales</field>
+		</record>
+		<record id="dian_unspsc_family_5" model="dian.unspsc.family">
+			<field name="family">1014</field>
+			<field name="name">Productos de talabartería y arreo</field>
+		</record>
+		<record id="dian_unspsc_family_6" model="dian.unspsc.family">
+			<field name="family">1015</field>
+			<field name="name">Semillas</field>
+		</record>
+		<record id="dian_unspsc_family_7" model="dian.unspsc.family">
+			<field name="family">1016</field>
+			<field name="name">Productos de floricultura y silvicultura</field>
+		</record>
+		<record id="dian_unspsc_family_8" model="dian.unspsc.family">
+			<field name="family">1017</field>
+			<field name="name">Fertilizantes y nutrientes para plantas y herbicidas</field>
+		</record>
+		<record id="dian_unspsc_family_9" model="dian.unspsc.family">
+			<field name="family">1019</field>
+			<field name="name">Productos para el control de plagas</field>
+		</record>
+		<record id="dian_unspsc_family_10" model="dian.unspsc.family">
+			<field name="family">1020</field>
+			<field name="name">Rosales vivos</field>
+		</record>
+		<record id="dian_unspsc_family_11" model="dian.unspsc.family">
+			<field name="family">1021</field>
+			<field name="name">Plantas vivas  de especies o variedades de flores altas</field>
+		</record>
+		<record id="dian_unspsc_family_12" model="dian.unspsc.family">
+			<field name="family">1022</field>
+			<field name="name">Plantas vivas  de especies o variedades de flores bajas</field>
+		</record>
+		<record id="dian_unspsc_family_13" model="dian.unspsc.family">
+			<field name="family">1023</field>
+			<field name="name">Crisantemos vivos</field>
+		</record>
+		<record id="dian_unspsc_family_14" model="dian.unspsc.family">
+			<field name="family">1024</field>
+			<field name="name">Claveles vivos</field>
+		</record>
+		<record id="dian_unspsc_family_15" model="dian.unspsc.family">
+			<field name="family">1025</field>
+			<field name="name">Orquídeas vivas</field>
+		</record>
+		<record id="dian_unspsc_family_16" model="dian.unspsc.family">
+			<field name="family">1030</field>
+			<field name="name">Rosas frescas cortadas</field>
+		</record>
+		<record id="dian_unspsc_family_17" model="dian.unspsc.family">
+			<field name="family">1031</field>
+			<field name="name">Bouquets cortados frescos  de especies o variedades de flores altas</field>
+		</record>
+		<record id="dian_unspsc_family_18" model="dian.unspsc.family">
+			<field name="family">1032</field>
+			<field name="name">Bouquets cortados frescos  de especies o variedades de flores bajas</field>
+		</record>
+		<record id="dian_unspsc_family_19" model="dian.unspsc.family">
+			<field name="family">1033</field>
+			<field name="name">Crisantemos cortados frescos</field>
+		</record>
+		<record id="dian_unspsc_family_20" model="dian.unspsc.family">
+			<field name="family">1034</field>
+			<field name="name">Bouquets florales cortados frescos</field>
+		</record>
+		<record id="dian_unspsc_family_21" model="dian.unspsc.family">
+			<field name="family">1035</field>
+			<field name="name">Claveles cortados frescos</field>
+		</record>
+		<record id="dian_unspsc_family_22" model="dian.unspsc.family">
+			<field name="family">1036</field>
+			<field name="name">Orquídeas cortadas frescas</field>
+		</record>
+		<record id="dian_unspsc_family_23" model="dian.unspsc.family">
+			<field name="family">1040</field>
+			<field name="name">Rosas cortadas secas</field>
+		</record>
+		<record id="dian_unspsc_family_24" model="dian.unspsc.family">
+			<field name="family">1041</field>
+			<field name="name">Bouquets cortados secos  de especies o variedades de flores altas</field>
+		</record>
+		<record id="dian_unspsc_family_25" model="dian.unspsc.family">
+			<field name="family">1042</field>
+			<field name="name">Bouquets cortados secos  de especies o variedades de flores bajas</field>
+		</record>
+		<record id="dian_unspsc_family_26" model="dian.unspsc.family">
+			<field name="family">1043</field>
+			<field name="name">Crisantemos cortados secos</field>
+		</record>
+		<record id="dian_unspsc_family_27" model="dian.unspsc.family">
+			<field name="family">1044</field>
+			<field name="name">Claveles cortados secos</field>
+		</record>
+		<record id="dian_unspsc_family_28" model="dian.unspsc.family">
+			<field name="family">1045</field>
+			<field name="name">Orquídeas cortadas secas</field>
+		</record>
+		<record id="dian_unspsc_family_29" model="dian.unspsc.family">
+			<field name="family">1050</field>
+			<field name="name">Follaje cortado fresco</field>
+		</record>
+		<record id="dian_unspsc_family_30" model="dian.unspsc.family">
+			<field name="family">1110</field>
+			<field name="name">Minerales</field>
+		</record>
+		<record id="dian_unspsc_family_31" model="dian.unspsc.family">
+			<field name="family">1111</field>
+			<field name="name">Tierra y piedra</field>
+		</record>
+		<record id="dian_unspsc_family_32" model="dian.unspsc.family">
+			<field name="family">1112</field>
+			<field name="name">Productos no comestibles de planta y silvicultura</field>
+		</record>
+		<record id="dian_unspsc_family_33" model="dian.unspsc.family">
+			<field name="family">1113</field>
+			<field name="name">Productos animales no comestibles</field>
+		</record>
+		<record id="dian_unspsc_family_34" model="dian.unspsc.family">
+			<field name="family">1114</field>
+			<field name="name">Chatarra y materiales de desecho</field>
+		</record>
+		<record id="dian_unspsc_family_35" model="dian.unspsc.family">
+			<field name="family">1115</field>
+			<field name="name">Fibra</field>
+		</record>
+		<record id="dian_unspsc_family_36" model="dian.unspsc.family">
+			<field name="family">1116</field>
+			<field name="name">Tejidos y materiales de cuero</field>
+		</record>
+		<record id="dian_unspsc_family_37" model="dian.unspsc.family">
+			<field name="family">1117</field>
+			<field name="name">Aleaciones</field>
+		</record>
+		<record id="dian_unspsc_family_38" model="dian.unspsc.family">
+			<field name="family">1118</field>
+			<field name="name">Óxido metálico</field>
+		</record>
+		<record id="dian_unspsc_family_39" model="dian.unspsc.family">
+			<field name="family">1119</field>
+			<field name="name">Desechos metálicos y chatarra</field>
+		</record>
+		<record id="dian_unspsc_family_40" model="dian.unspsc.family">
+			<field name="family">1213</field>
+			<field name="name">Materiales explosivos</field>
+		</record>
+		<record id="dian_unspsc_family_41" model="dian.unspsc.family">
+			<field name="family">1214</field>
+			<field name="name">Elementos y gases</field>
+		</record>
+		<record id="dian_unspsc_family_42" model="dian.unspsc.family">
+			<field name="family">1216</field>
+			<field name="name">Aditivos</field>
+		</record>
+		<record id="dian_unspsc_family_43" model="dian.unspsc.family">
+			<field name="family">1217</field>
+			<field name="name">Colorantes</field>
+		</record>
+		<record id="dian_unspsc_family_44" model="dian.unspsc.family">
+			<field name="family">1218</field>
+			<field name="name">Ceras y aceites</field>
+		</record>
+		<record id="dian_unspsc_family_45" model="dian.unspsc.family">
+			<field name="family">1219</field>
+			<field name="name">Solventes</field>
+		</record>
+		<record id="dian_unspsc_family_46" model="dian.unspsc.family">
+			<field name="family">1235</field>
+			<field name="name">Compuestos y mezclas</field>
+		</record>
+		<record id="dian_unspsc_family_47" model="dian.unspsc.family">
+			<field name="family">1310</field>
+			<field name="name">Caucho y elastómeros</field>
+		</record>
+		<record id="dian_unspsc_family_48" model="dian.unspsc.family">
+			<field name="family">1311</field>
+			<field name="name">Resinas y colofonias y otros materiales derivados de resina</field>
+		</record>
+		<record id="dian_unspsc_family_49" model="dian.unspsc.family">
+			<field name="family">1410</field>
+			<field name="name">Materiales de papel</field>
+		</record>
+		<record id="dian_unspsc_family_50" model="dian.unspsc.family">
+			<field name="family">1411</field>
+			<field name="name">Productos de papel</field>
+		</record>
+		<record id="dian_unspsc_family_51" model="dian.unspsc.family">
+			<field name="family">1412</field>
+			<field name="name">Papel para uso industrial</field>
+		</record>
+		<record id="dian_unspsc_family_52" model="dian.unspsc.family">
+			<field name="family">1510</field>
+			<field name="name">Combustibles</field>
+		</record>
+		<record id="dian_unspsc_family_53" model="dian.unspsc.family">
+			<field name="family">1511</field>
+			<field name="name">Combustibles gaseosos y aditivos</field>
+		</record>
+		<record id="dian_unspsc_family_54" model="dian.unspsc.family">
+			<field name="family">1512</field>
+			<field name="name">Lubricantes</field>
+		</record>
+		<record id="dian_unspsc_family_55" model="dian.unspsc.family">
+			<field name="family">1513</field>
+			<field name="name">Combustible para reactores nucleares</field>
+		</record>
+		<record id="dian_unspsc_family_56" model="dian.unspsc.family">
+			<field name="family">2010</field>
+			<field name="name">Maquinaria y equipo de minería y explotación de canteras</field>
+		</record>
+		<record id="dian_unspsc_family_57" model="dian.unspsc.family">
+			<field name="family">2011</field>
+			<field name="name">Equipo de perforación y explotación de pozos</field>
+		</record>
+		<record id="dian_unspsc_family_58" model="dian.unspsc.family">
+			<field name="family">2012</field>
+			<field name="name">Equipo para perforación y exploración de petróleo y gas</field>
+		</record>
+		<record id="dian_unspsc_family_59" model="dian.unspsc.family">
+			<field name="family">2013</field>
+			<field name="name">Materiales para  perforación y operaciones de petróleo y gas</field>
+		</record>
+		<record id="dian_unspsc_family_60" model="dian.unspsc.family">
+			<field name="family">2014</field>
+			<field name="name">Equipo de producción y operación de petróleo y gas</field>
+		</record>
+		<record id="dian_unspsc_family_61" model="dian.unspsc.family">
+			<field name="family">2110</field>
+			<field name="name">Maquinaria y equipo para agricultura</field>
+		</record>
+		<record id="dian_unspsc_family_62" model="dian.unspsc.family">
+			<field name="family">2111</field>
+			<field name="name">Equipo de pesca y acuicultura</field>
+		</record>
+		<record id="dian_unspsc_family_63" model="dian.unspsc.family">
+			<field name="family">2210</field>
+			<field name="name">Maquinaria y equipo pesado de construcción</field>
+		</record>
+		<record id="dian_unspsc_family_64" model="dian.unspsc.family">
+			<field name="family">2310</field>
+			<field name="name">Maquinaria para el procesamiento de materias primas</field>
+		</record>
+		<record id="dian_unspsc_family_65" model="dian.unspsc.family">
+			<field name="family">2311</field>
+			<field name="name">Maquinaria para el procesamiento de petróleo</field>
+		</record>
+		<record id="dian_unspsc_family_66" model="dian.unspsc.family">
+			<field name="family">2312</field>
+			<field name="name">Maquinaria y accesorios de textiles y tejidos</field>
+		</record>
+		<record id="dian_unspsc_family_67" model="dian.unspsc.family">
+			<field name="family">2313</field>
+			<field name="name">Maquinaria y equipos lapidarios</field>
+		</record>
+		<record id="dian_unspsc_family_68" model="dian.unspsc.family">
+			<field name="family">2314</field>
+			<field name="name">Maquinaria de reparación y accesorios para marroquinería</field>
+		</record>
+		<record id="dian_unspsc_family_69" model="dian.unspsc.family">
+			<field name="family">2315</field>
+			<field name="name">Maquinaria</field>
+		</record>
+		<record id="dian_unspsc_family_70" model="dian.unspsc.family">
+			<field name="family">2316</field>
+			<field name="name">Máquinas</field>
+		</record>
+		<record id="dian_unspsc_family_71" model="dian.unspsc.family">
+			<field name="family">2318</field>
+			<field name="name">Equipo industrial para alimentos y bebidas</field>
+		</record>
+		<record id="dian_unspsc_family_72" model="dian.unspsc.family">
+			<field name="family">2319</field>
+			<field name="name">Mezcladores y sus partes y accesorios</field>
+		</record>
+		<record id="dian_unspsc_family_73" model="dian.unspsc.family">
+			<field name="family">2320</field>
+			<field name="name">Equipamiento para transferencia de masa</field>
+		</record>
+		<record id="dian_unspsc_family_74" model="dian.unspsc.family">
+			<field name="family">2321</field>
+			<field name="name">Maquinaria de fabricación electrónica</field>
+		</record>
+		<record id="dian_unspsc_family_75" model="dian.unspsc.family">
+			<field name="family">2322</field>
+			<field name="name">Equipo y maquinaria de procesamiento de pollos</field>
+		</record>
+		<record id="dian_unspsc_family_76" model="dian.unspsc.family">
+			<field name="family">2323</field>
+			<field name="name">Equipo y maquinaria de procesamiento de madera y aserrado</field>
+		</record>
+		<record id="dian_unspsc_family_77" model="dian.unspsc.family">
+			<field name="family">2324</field>
+			<field name="name">Maquinaria y accesorios para cortar metales</field>
+		</record>
+		<record id="dian_unspsc_family_78" model="dian.unspsc.family">
+			<field name="family">2325</field>
+			<field name="name">Maquinaria y accesorios para el formado de metales</field>
+		</record>
+		<record id="dian_unspsc_family_79" model="dian.unspsc.family">
+			<field name="family">2326</field>
+			<field name="name">Maquinaria y accesorios para hacer prototipos rápidos</field>
+		</record>
+		<record id="dian_unspsc_family_80" model="dian.unspsc.family">
+			<field name="family">2327</field>
+			<field name="name">Maquinaria y accesorios y suministros para soldadura de todas las clases</field>
+		</record>
+		<record id="dian_unspsc_family_81" model="dian.unspsc.family">
+			<field name="family">2328</field>
+			<field name="name">Maquinaria para el tratamiento de metal</field>
+		</record>
+		<record id="dian_unspsc_family_82" model="dian.unspsc.family">
+			<field name="family">2329</field>
+			<field name="name">Herramientas de maquinado industrial</field>
+		</record>
+		<record id="dian_unspsc_family_83" model="dian.unspsc.family">
+			<field name="family">2330</field>
+			<field name="name">Maquinaria y equipo para cable</field>
+		</record>
+		<record id="dian_unspsc_family_84" model="dian.unspsc.family">
+			<field name="family">2410</field>
+			<field name="name">Maquinaria y equipo para manejo de materiales</field>
+		</record>
+		<record id="dian_unspsc_family_85" model="dian.unspsc.family">
+			<field name="family">2411</field>
+			<field name="name">Recipientes y almacenamiento</field>
+		</record>
+		<record id="dian_unspsc_family_86" model="dian.unspsc.family">
+			<field name="family">2412</field>
+			<field name="name">Materiales de empaque</field>
+		</record>
+		<record id="dian_unspsc_family_87" model="dian.unspsc.family">
+			<field name="family">2413</field>
+			<field name="name">Refrigeración industrial</field>
+		</record>
+		<record id="dian_unspsc_family_88" model="dian.unspsc.family">
+			<field name="family">2414</field>
+			<field name="name">Suministros de embalaje</field>
+		</record>
+		<record id="dian_unspsc_family_89" model="dian.unspsc.family">
+			<field name="family">2510</field>
+			<field name="name">Vehículos de motor</field>
+		</record>
+		<record id="dian_unspsc_family_90" model="dian.unspsc.family">
+			<field name="family">2511</field>
+			<field name="name">Transporte marítimo</field>
+		</record>
+		<record id="dian_unspsc_family_91" model="dian.unspsc.family">
+			<field name="family">2512</field>
+			<field name="name">Maquinaria y equipo para ferrocarril y tranvías</field>
+		</record>
+		<record id="dian_unspsc_family_92" model="dian.unspsc.family">
+			<field name="family">2513</field>
+			<field name="name">Aeronaves</field>
+		</record>
+		<record id="dian_unspsc_family_93" model="dian.unspsc.family">
+			<field name="family">2515</field>
+			<field name="name">Naves espaciales</field>
+		</record>
+		<record id="dian_unspsc_family_94" model="dian.unspsc.family">
+			<field name="family">2516</field>
+			<field name="name">Bicicletas no motorizadas</field>
+		</record>
+		<record id="dian_unspsc_family_95" model="dian.unspsc.family">
+			<field name="family">2517</field>
+			<field name="name">Componentes y sistemas de transporte</field>
+		</record>
+		<record id="dian_unspsc_family_96" model="dian.unspsc.family">
+			<field name="family">2518</field>
+			<field name="name">Carrocerías y remolques</field>
+		</record>
+		<record id="dian_unspsc_family_97" model="dian.unspsc.family">
+			<field name="family">2519</field>
+			<field name="name">Equipo para servicios de transporte</field>
+		</record>
+		<record id="dian_unspsc_family_98" model="dian.unspsc.family">
+			<field name="family">2520</field>
+			<field name="name">Sistemas  y componentes y equipos aeroespaciales</field>
+		</record>
+		<record id="dian_unspsc_family_99" model="dian.unspsc.family">
+			<field name="family">2610</field>
+			<field name="name">Fuentes de energía</field>
+		</record>
+		<record id="dian_unspsc_family_100" model="dian.unspsc.family">
+			<field name="family">2611</field>
+			<field name="name">Baterías y generadores y transmisión de energía cinética</field>
+		</record>
+		<record id="dian_unspsc_family_101" model="dian.unspsc.family">
+			<field name="family">2612</field>
+			<field name="name">Alambres</field>
+		</record>
+		<record id="dian_unspsc_family_102" model="dian.unspsc.family">
+			<field name="family">2613</field>
+			<field name="name">Generación de energía</field>
+		</record>
+		<record id="dian_unspsc_family_103" model="dian.unspsc.family">
+			<field name="family">2614</field>
+			<field name="name">Maquinaria y equipo para energía atómica o nuclear</field>
+		</record>
+		<record id="dian_unspsc_family_104" model="dian.unspsc.family">
+			<field name="family">2711</field>
+			<field name="name">Herramientas de mano</field>
+		</record>
+		<record id="dian_unspsc_family_105" model="dian.unspsc.family">
+			<field name="family">2712</field>
+			<field name="name">Maquinaria y equipo hidráulico</field>
+		</record>
+		<record id="dian_unspsc_family_106" model="dian.unspsc.family">
+			<field name="family">2713</field>
+			<field name="name">Maquinaria y equipo neumático</field>
+		</record>
+		<record id="dian_unspsc_family_107" model="dian.unspsc.family">
+			<field name="family">2714</field>
+			<field name="name">Herramientas especializadas automotrices</field>
+		</record>
+		<record id="dian_unspsc_family_108" model="dian.unspsc.family">
+			<field name="family">3010</field>
+			<field name="name">Componentes estructurales y formas básicas</field>
+		</record>
+		<record id="dian_unspsc_family_109" model="dian.unspsc.family">
+			<field name="family">3011</field>
+			<field name="name">Hormigón</field>
+		</record>
+		<record id="dian_unspsc_family_110" model="dian.unspsc.family">
+			<field name="family">3012</field>
+			<field name="name">Carreteras y paisaje</field>
+		</record>
+		<record id="dian_unspsc_family_111" model="dian.unspsc.family">
+			<field name="family">3013</field>
+			<field name="name">Productos de construcción estructurales</field>
+		</record>
+		<record id="dian_unspsc_family_112" model="dian.unspsc.family">
+			<field name="family">3014</field>
+			<field name="name">Aislamiento</field>
+		</record>
+		<record id="dian_unspsc_family_113" model="dian.unspsc.family">
+			<field name="family">3015</field>
+			<field name="name">Materiales para acabado de exteriores</field>
+		</record>
+		<record id="dian_unspsc_family_114" model="dian.unspsc.family">
+			<field name="family">3016</field>
+			<field name="name">Materiales de acabado de interiores</field>
+		</record>
+		<record id="dian_unspsc_family_115" model="dian.unspsc.family">
+			<field name="family">3017</field>
+			<field name="name">Puertas y ventanas y vidrio</field>
+		</record>
+		<record id="dian_unspsc_family_116" model="dian.unspsc.family">
+			<field name="family">3018</field>
+			<field name="name">Instalaciones de plomería</field>
+		</record>
+		<record id="dian_unspsc_family_117" model="dian.unspsc.family">
+			<field name="family">3019</field>
+			<field name="name">Equipo de apoyo para Construcción y Mantenimiento</field>
+		</record>
+		<record id="dian_unspsc_family_118" model="dian.unspsc.family">
+			<field name="family">3024</field>
+			<field name="name">Componentes de construcción de estructura portátil</field>
+		</record>
+		<record id="dian_unspsc_family_119" model="dian.unspsc.family">
+			<field name="family">3025</field>
+			<field name="name">Estructuras y materiales de minería subterránea</field>
+		</record>
+		<record id="dian_unspsc_family_120" model="dian.unspsc.family">
+			<field name="family">3026</field>
+			<field name="name">Materiales estructurales</field>
+		</record>
+		<record id="dian_unspsc_family_121" model="dian.unspsc.family">
+			<field name="family">3110</field>
+			<field name="name">Piezas de fundición y ensambles de piezas de fundición</field>
+		</record>
+		<record id="dian_unspsc_family_122" model="dian.unspsc.family">
+			<field name="family">3111</field>
+			<field name="name">Extrusiones</field>
+		</record>
+		<record id="dian_unspsc_family_123" model="dian.unspsc.family">
+			<field name="family">3112</field>
+			<field name="name">Piezas fundidas maquinadas</field>
+		</record>
+		<record id="dian_unspsc_family_124" model="dian.unspsc.family">
+			<field name="family">3113</field>
+			<field name="name">Forjaduras</field>
+		</record>
+		<record id="dian_unspsc_family_125" model="dian.unspsc.family">
+			<field name="family">3114</field>
+			<field name="name">Molduras</field>
+		</record>
+		<record id="dian_unspsc_family_126" model="dian.unspsc.family">
+			<field name="family">3115</field>
+			<field name="name">Cuerda</field>
+		</record>
+		<record id="dian_unspsc_family_127" model="dian.unspsc.family">
+			<field name="family">3116</field>
+			<field name="name">Ferretería</field>
+		</record>
+		<record id="dian_unspsc_family_128" model="dian.unspsc.family">
+			<field name="family">3117</field>
+			<field name="name">Rodamientos</field>
+		</record>
+		<record id="dian_unspsc_family_129" model="dian.unspsc.family">
+			<field name="family">3118</field>
+			<field name="name">Empaques</field>
+		</record>
+		<record id="dian_unspsc_family_130" model="dian.unspsc.family">
+			<field name="family">3119</field>
+			<field name="name">Materiales de afilado pulido y alisado</field>
+		</record>
+		<record id="dian_unspsc_family_131" model="dian.unspsc.family">
+			<field name="family">3120</field>
+			<field name="name">Adhesivos y selladores</field>
+		</record>
+		<record id="dian_unspsc_family_132" model="dian.unspsc.family">
+			<field name="family">3121</field>
+			<field name="name">Pinturas y bases y acabados</field>
+		</record>
+		<record id="dian_unspsc_family_133" model="dian.unspsc.family">
+			<field name="family">3122</field>
+			<field name="name">Extractos de teñir y de curtir</field>
+		</record>
+		<record id="dian_unspsc_family_134" model="dian.unspsc.family">
+			<field name="family">3123</field>
+			<field name="name">Materia prima en placas o barras labradas</field>
+		</record>
+		<record id="dian_unspsc_family_135" model="dian.unspsc.family">
+			<field name="family">3124</field>
+			<field name="name">Óptica industrial</field>
+		</record>
+		<record id="dian_unspsc_family_136" model="dian.unspsc.family">
+			<field name="family">3125</field>
+			<field name="name">Sistemas de control neumático</field>
+		</record>
+		<record id="dian_unspsc_family_137" model="dian.unspsc.family">
+			<field name="family">3126</field>
+			<field name="name">Cubiertas</field>
+		</record>
+		<record id="dian_unspsc_family_138" model="dian.unspsc.family">
+			<field name="family">3127</field>
+			<field name="name">Piezas hechas a máquina</field>
+		</record>
+		<record id="dian_unspsc_family_139" model="dian.unspsc.family">
+			<field name="family">3128</field>
+			<field name="name">Componentes de placa y estampados</field>
+		</record>
+		<record id="dian_unspsc_family_140" model="dian.unspsc.family">
+			<field name="family">3129</field>
+			<field name="name">Extrusiones maquinadas</field>
+		</record>
+		<record id="dian_unspsc_family_141" model="dian.unspsc.family">
+			<field name="family">3130</field>
+			<field name="name">Forjas labradas</field>
+		</record>
+		<record id="dian_unspsc_family_142" model="dian.unspsc.family">
+			<field name="family">3131</field>
+			<field name="name">Ensambles de tubería fabricada</field>
+		</record>
+		<record id="dian_unspsc_family_143" model="dian.unspsc.family">
+			<field name="family">3132</field>
+			<field name="name">Ensambles fabricados de material en barras</field>
+		</record>
+		<record id="dian_unspsc_family_144" model="dian.unspsc.family">
+			<field name="family">3133</field>
+			<field name="name">Ensambles estructurales fabricados</field>
+		</record>
+		<record id="dian_unspsc_family_145" model="dian.unspsc.family">
+			<field name="family">3134</field>
+			<field name="name">Ensambles de lámina fabricado</field>
+		</record>
+		<record id="dian_unspsc_family_146" model="dian.unspsc.family">
+			<field name="family">3135</field>
+			<field name="name">Ensambles de tubería fabricada</field>
+		</record>
+		<record id="dian_unspsc_family_147" model="dian.unspsc.family">
+			<field name="family">3136</field>
+			<field name="name">Ensambles de placa fabricados</field>
+		</record>
+		<record id="dian_unspsc_family_148" model="dian.unspsc.family">
+			<field name="family">3137</field>
+			<field name="name">Refractarios</field>
+		</record>
+		<record id="dian_unspsc_family_149" model="dian.unspsc.family">
+			<field name="family">3138</field>
+			<field name="name">Imanes y materiales magnéticos</field>
+		</record>
+		<record id="dian_unspsc_family_150" model="dian.unspsc.family">
+			<field name="family">3139</field>
+			<field name="name">Maquinados</field>
+		</record>
+		<record id="dian_unspsc_family_151" model="dian.unspsc.family">
+			<field name="family">3140</field>
+			<field name="name">Empaques</field>
+		</record>
+		<record id="dian_unspsc_family_152" model="dian.unspsc.family">
+			<field name="family">3141</field>
+			<field name="name">Sellos</field>
+		</record>
+		<record id="dian_unspsc_family_153" model="dian.unspsc.family">
+			<field name="family">3142</field>
+			<field name="name">Partes sinterizadas</field>
+		</record>
+		<record id="dian_unspsc_family_154" model="dian.unspsc.family">
+			<field name="family">3210</field>
+			<field name="name">Circuitos impresos</field>
+		</record>
+		<record id="dian_unspsc_family_155" model="dian.unspsc.family">
+			<field name="family">3211</field>
+			<field name="name">Dispositivo semiconductor discreto</field>
+		</record>
+		<record id="dian_unspsc_family_156" model="dian.unspsc.family">
+			<field name="family">3212</field>
+			<field name="name">Componentes pasivos discretos</field>
+		</record>
+		<record id="dian_unspsc_family_157" model="dian.unspsc.family">
+			<field name="family">3213</field>
+			<field name="name">Piezas de componentes y hardware electrónicos y accesorios</field>
+		</record>
+		<record id="dian_unspsc_family_158" model="dian.unspsc.family">
+			<field name="family">3214</field>
+			<field name="name">Dispositivos de tubo electrónico y accesorios</field>
+		</record>
+		<record id="dian_unspsc_family_159" model="dian.unspsc.family">
+			<field name="family">3215</field>
+			<field name="name">Dispositivos y componentes y accesorios de control de automatización</field>
+		</record>
+		<record id="dian_unspsc_family_160" model="dian.unspsc.family">
+			<field name="family">3910</field>
+			<field name="name">Lámparas y bombillas y componentes para lámparas</field>
+		</record>
+		<record id="dian_unspsc_family_161" model="dian.unspsc.family">
+			<field name="family">3911</field>
+			<field name="name">Iluminación</field>
+		</record>
+		<record id="dian_unspsc_family_162" model="dian.unspsc.family">
+			<field name="family">3912</field>
+			<field name="name">Equipos</field>
+		</record>
+		<record id="dian_unspsc_family_163" model="dian.unspsc.family">
+			<field name="family">3913</field>
+			<field name="name">Dispositivos y accesorios y suministros de manejo de cable eléctrico</field>
+		</record>
+		<record id="dian_unspsc_family_164" model="dian.unspsc.family">
+			<field name="family">4010</field>
+			<field name="name">Calefacción</field>
+		</record>
+		<record id="dian_unspsc_family_165" model="dian.unspsc.family">
+			<field name="family">4014</field>
+			<field name="name">Distribución de fluidos y gas</field>
+		</record>
+		<record id="dian_unspsc_family_166" model="dian.unspsc.family">
+			<field name="family">4015</field>
+			<field name="name">Bombas y compresores industriales</field>
+		</record>
+		<record id="dian_unspsc_family_167" model="dian.unspsc.family">
+			<field name="family">4016</field>
+			<field name="name">Filtrado y purificación industrial</field>
+		</record>
+		<record id="dian_unspsc_family_168" model="dian.unspsc.family">
+			<field name="family">4017</field>
+			<field name="name">Instalaciones de tubos y entubamientos</field>
+		</record>
+		<record id="dian_unspsc_family_169" model="dian.unspsc.family">
+			<field name="family">4018</field>
+			<field name="name">Instalaciones de tubos y tuberías</field>
+		</record>
+		<record id="dian_unspsc_family_170" model="dian.unspsc.family">
+			<field name="family">4110</field>
+			<field name="name">Equipo de laboratorio y científico</field>
+		</record>
+		<record id="dian_unspsc_family_171" model="dian.unspsc.family">
+			<field name="family">4111</field>
+			<field name="name">Instrumentos de medida</field>
+		</record>
+		<record id="dian_unspsc_family_172" model="dian.unspsc.family">
+			<field name="family">4112</field>
+			<field name="name">Suministros y accesorios de laboratorio</field>
+		</record>
+		<record id="dian_unspsc_family_173" model="dian.unspsc.family">
+			<field name="family">4212</field>
+			<field name="name">Equipos y suministros veterinarios</field>
+		</record>
+		<record id="dian_unspsc_family_174" model="dian.unspsc.family">
+			<field name="family">4213</field>
+			<field name="name">Telas y vestidos médicos</field>
+		</record>
+		<record id="dian_unspsc_family_175" model="dian.unspsc.family">
+			<field name="family">4214</field>
+			<field name="name">Suministros</field>
+		</record>
+		<record id="dian_unspsc_family_176" model="dian.unspsc.family">
+			<field name="family">4215</field>
+			<field name="name">Equipos y suministros dentales</field>
+		</record>
+		<record id="dian_unspsc_family_177" model="dian.unspsc.family">
+			<field name="family">4216</field>
+			<field name="name">Equipo de diálisis y suministros</field>
+		</record>
+		<record id="dian_unspsc_family_178" model="dian.unspsc.family">
+			<field name="family">4217</field>
+			<field name="name">Productos para los servicios médicos de urgencias y campo</field>
+		</record>
+		<record id="dian_unspsc_family_179" model="dian.unspsc.family">
+			<field name="family">4218</field>
+			<field name="name">Productos de examen y control del paciente</field>
+		</record>
+		<record id="dian_unspsc_family_180" model="dian.unspsc.family">
+			<field name="family">4219</field>
+			<field name="name">Productos de centro médico</field>
+		</record>
+		<record id="dian_unspsc_family_181" model="dian.unspsc.family">
+			<field name="family">4220</field>
+			<field name="name">Productos de hacer imágenes diagnósticas médicas y de medicina nuclear</field>
+		</record>
+		<record id="dian_unspsc_family_182" model="dian.unspsc.family">
+			<field name="family">4221</field>
+			<field name="name">Ayuda para personas con desafíos físicos para vivir independiente</field>
+		</record>
+		<record id="dian_unspsc_family_183" model="dian.unspsc.family">
+			<field name="family">4222</field>
+			<field name="name">Productos para administración intravenosa y arterial</field>
+		</record>
+		<record id="dian_unspsc_family_184" model="dian.unspsc.family">
+			<field name="family">4223</field>
+			<field name="name">Nutrición clínica</field>
+		</record>
+		<record id="dian_unspsc_family_185" model="dian.unspsc.family">
+			<field name="family">4224</field>
+			<field name="name">Productos medicinales de deportes y ortopédicos y prótesis</field>
+		</record>
+		<record id="dian_unspsc_family_186" model="dian.unspsc.family">
+			<field name="family">4225</field>
+			<field name="name">Productos de rehabilitación y terapia ocupacional y física</field>
+		</record>
+		<record id="dian_unspsc_family_187" model="dian.unspsc.family">
+			<field name="family">4226</field>
+			<field name="name">Equipo y suministros post mortem y funerarios</field>
+		</record>
+		<record id="dian_unspsc_family_188" model="dian.unspsc.family">
+			<field name="family">4227</field>
+			<field name="name">Productos de resucitación</field>
+		</record>
+		<record id="dian_unspsc_family_189" model="dian.unspsc.family">
+			<field name="family">4228</field>
+			<field name="name">Productos para la esterilización médica</field>
+		</record>
+		<record id="dian_unspsc_family_190" model="dian.unspsc.family">
+			<field name="family">4229</field>
+			<field name="name">Productos quirúrgicos</field>
+		</record>
+		<record id="dian_unspsc_family_191" model="dian.unspsc.family">
+			<field name="family">4230</field>
+			<field name="name">Suministros para formación y estudios de medicina</field>
+		</record>
+		<record id="dian_unspsc_family_192" model="dian.unspsc.family">
+			<field name="family">4231</field>
+			<field name="name">Productos para el cuidado de heridas</field>
+		</record>
+		<record id="dian_unspsc_family_193" model="dian.unspsc.family">
+			<field name="family">4232</field>
+			<field name="name">Implantes ortopédicos quirúrgicos</field>
+		</record>
+		<record id="dian_unspsc_family_194" model="dian.unspsc.family">
+			<field name="family">4319</field>
+			<field name="name">Dispositivos de comunicaciones y accesorios</field>
+		</record>
+		<record id="dian_unspsc_family_195" model="dian.unspsc.family">
+			<field name="family">4320</field>
+			<field name="name">Componentes para tecnología de la información</field>
+		</record>
+		<record id="dian_unspsc_family_196" model="dian.unspsc.family">
+			<field name="family">4321</field>
+			<field name="name">Equipo informático y accesorios</field>
+		</record>
+		<record id="dian_unspsc_family_197" model="dian.unspsc.family">
+			<field name="family">4322</field>
+			<field name="name">Equipos o plataformas y accesorios de redes multimedia o de voz y datos</field>
+		</record>
+		<record id="dian_unspsc_family_198" model="dian.unspsc.family">
+			<field name="family">4323</field>
+			<field name="name">Software</field>
+		</record>
+		<record id="dian_unspsc_family_199" model="dian.unspsc.family">
+			<field name="family">4410</field>
+			<field name="name">Maquinaria</field>
+		</record>
+		<record id="dian_unspsc_family_200" model="dian.unspsc.family">
+			<field name="family">4411</field>
+			<field name="name">Accesorios de oficina y escritorio</field>
+		</record>
+		<record id="dian_unspsc_family_201" model="dian.unspsc.family">
+			<field name="family">4412</field>
+			<field name="name">Suministros de oficina</field>
+		</record>
+		<record id="dian_unspsc_family_202" model="dian.unspsc.family">
+			<field name="family">4510</field>
+			<field name="name">Equipo de imprenta y publicación</field>
+		</record>
+		<record id="dian_unspsc_family_203" model="dian.unspsc.family">
+			<field name="family">4511</field>
+			<field name="name">Equipos de audio y video para presentación y composición</field>
+		</record>
+		<record id="dian_unspsc_family_204" model="dian.unspsc.family">
+			<field name="family">4512</field>
+			<field name="name">Equipo de vídeo</field>
+		</record>
+		<record id="dian_unspsc_family_205" model="dian.unspsc.family">
+			<field name="family">4513</field>
+			<field name="name">Medios fotográficos y de grabación</field>
+		</record>
+		<record id="dian_unspsc_family_206" model="dian.unspsc.family">
+			<field name="family">4514</field>
+			<field name="name">Suministros fotográficos para cine</field>
+		</record>
+		<record id="dian_unspsc_family_207" model="dian.unspsc.family">
+			<field name="family">4610</field>
+			<field name="name">Armas ligeras y munición</field>
+		</record>
+		<record id="dian_unspsc_family_208" model="dian.unspsc.family">
+			<field name="family">4611</field>
+			<field name="name">Armas de guerra convencionales</field>
+		</record>
+		<record id="dian_unspsc_family_209" model="dian.unspsc.family">
+			<field name="family">4612</field>
+			<field name="name">Misiles</field>
+		</record>
+		<record id="dian_unspsc_family_210" model="dian.unspsc.family">
+			<field name="family">4613</field>
+			<field name="name">Cohetes y subsistemas</field>
+		</record>
+		<record id="dian_unspsc_family_211" model="dian.unspsc.family">
+			<field name="family">4614</field>
+			<field name="name">Lanzadores</field>
+		</record>
+		<record id="dian_unspsc_family_212" model="dian.unspsc.family">
+			<field name="family">4615</field>
+			<field name="name">Protección del Orden Público</field>
+		</record>
+		<record id="dian_unspsc_family_213" model="dian.unspsc.family">
+			<field name="family">4616</field>
+			<field name="name">Seguridad y control público</field>
+		</record>
+		<record id="dian_unspsc_family_214" model="dian.unspsc.family">
+			<field name="family">4617</field>
+			<field name="name">Seguridad</field>
+		</record>
+		<record id="dian_unspsc_family_215" model="dian.unspsc.family">
+			<field name="family">4618</field>
+			<field name="name">Seguridad y protección personal</field>
+		</record>
+		<record id="dian_unspsc_family_216" model="dian.unspsc.family">
+			<field name="family">4619</field>
+			<field name="name">Protección contra incendios</field>
+		</record>
+		<record id="dian_unspsc_family_217" model="dian.unspsc.family">
+			<field name="family">4620</field>
+			<field name="name">Equipo de entrenamiento de seguridad física e industrial</field>
+		</record>
+		<record id="dian_unspsc_family_218" model="dian.unspsc.family">
+			<field name="family">4710</field>
+			<field name="name">Tratamiento</field>
+		</record>
+		<record id="dian_unspsc_family_219" model="dian.unspsc.family">
+			<field name="family">4711</field>
+			<field name="name">Equipo industrial de lavandería y lavado en seco</field>
+		</record>
+		<record id="dian_unspsc_family_220" model="dian.unspsc.family">
+			<field name="family">4712</field>
+			<field name="name">Equipo de aseo</field>
+		</record>
+		<record id="dian_unspsc_family_221" model="dian.unspsc.family">
+			<field name="family">4713</field>
+			<field name="name">Suministros de aseo y limpieza</field>
+		</record>
+		<record id="dian_unspsc_family_222" model="dian.unspsc.family">
+			<field name="family">4810</field>
+			<field name="name">Equipos de servicios de alimentación para instituciones</field>
+		</record>
+		<record id="dian_unspsc_family_223" model="dian.unspsc.family">
+			<field name="family">4811</field>
+			<field name="name">Máquinas expendedoras</field>
+		</record>
+		<record id="dian_unspsc_family_224" model="dian.unspsc.family">
+			<field name="family">4812</field>
+			<field name="name">Equipo de Juego o de Apostar</field>
+		</record>
+		<record id="dian_unspsc_family_225" model="dian.unspsc.family">
+			<field name="family">4813</field>
+			<field name="name">Equipo y materiales funerarios</field>
+		</record>
+		<record id="dian_unspsc_family_226" model="dian.unspsc.family">
+			<field name="family">4910</field>
+			<field name="name">Coleccionables y condecoraciones</field>
+		</record>
+		<record id="dian_unspsc_family_227" model="dian.unspsc.family">
+			<field name="family">4912</field>
+			<field name="name">Equipos y accesorios para acampada y exteriores</field>
+		</record>
+		<record id="dian_unspsc_family_228" model="dian.unspsc.family">
+			<field name="family">4913</field>
+			<field name="name">Equipos de pesca y caza</field>
+		</record>
+		<record id="dian_unspsc_family_229" model="dian.unspsc.family">
+			<field name="family">4914</field>
+			<field name="name">Equipos para deportes acuáticos</field>
+		</record>
+		<record id="dian_unspsc_family_230" model="dian.unspsc.family">
+			<field name="family">4915</field>
+			<field name="name">Equipos para deportes de invierno</field>
+		</record>
+		<record id="dian_unspsc_family_231" model="dian.unspsc.family">
+			<field name="family">4916</field>
+			<field name="name">Equipos deportivos para campos y canchas</field>
+		</record>
+		<record id="dian_unspsc_family_232" model="dian.unspsc.family">
+			<field name="family">4917</field>
+			<field name="name">Equipos de gimnasia y boxeo</field>
+		</record>
+		<record id="dian_unspsc_family_233" model="dian.unspsc.family">
+			<field name="family">4918</field>
+			<field name="name">Juegos</field>
+		</record>
+		<record id="dian_unspsc_family_234" model="dian.unspsc.family">
+			<field name="family">4920</field>
+			<field name="name">Equipo para entrenamiento físico</field>
+		</record>
+		<record id="dian_unspsc_family_235" model="dian.unspsc.family">
+			<field name="family">4921</field>
+			<field name="name">Otros deportes</field>
+		</record>
+		<record id="dian_unspsc_family_236" model="dian.unspsc.family">
+			<field name="family">4922</field>
+			<field name="name">Equipo  y accesorios para deportes</field>
+		</record>
+		<record id="dian_unspsc_family_237" model="dian.unspsc.family">
+			<field name="family">4924</field>
+			<field name="name">Equipo de recreo</field>
+		</record>
+		<record id="dian_unspsc_family_238" model="dian.unspsc.family">
+			<field name="family">5010</field>
+			<field name="name">Frutos secos</field>
+		</record>
+		<record id="dian_unspsc_family_239" model="dian.unspsc.family">
+			<field name="family">5011</field>
+			<field name="name">Productos de carne y aves de corral</field>
+		</record>
+		<record id="dian_unspsc_family_240" model="dian.unspsc.family">
+			<field name="family">5012</field>
+			<field name="name">Pescados y mariscos</field>
+		</record>
+		<record id="dian_unspsc_family_241" model="dian.unspsc.family">
+			<field name="family">5013</field>
+			<field name="name">Productos lácteos y huevos</field>
+		</record>
+		<record id="dian_unspsc_family_242" model="dian.unspsc.family">
+			<field name="family">5015</field>
+			<field name="name">Aceites y grasas comestibles</field>
+		</record>
+		<record id="dian_unspsc_family_243" model="dian.unspsc.family">
+			<field name="family">5016</field>
+			<field name="name">Chocolates</field>
+		</record>
+		<record id="dian_unspsc_family_244" model="dian.unspsc.family">
+			<field name="family">5017</field>
+			<field name="name">Condimentos y conservantes</field>
+		</record>
+		<record id="dian_unspsc_family_245" model="dian.unspsc.family">
+			<field name="family">5018</field>
+			<field name="name">Productos de panadería</field>
+		</record>
+		<record id="dian_unspsc_family_246" model="dian.unspsc.family">
+			<field name="family">5019</field>
+			<field name="name">Alimentos preparados y conservados</field>
+		</record>
+		<record id="dian_unspsc_family_247" model="dian.unspsc.family">
+			<field name="family">5020</field>
+			<field name="name">Bebidas</field>
+		</record>
+		<record id="dian_unspsc_family_248" model="dian.unspsc.family">
+			<field name="family">5021</field>
+			<field name="name">Tabaco y productos de fumar y substitutos</field>
+		</record>
+		<record id="dian_unspsc_family_249" model="dian.unspsc.family">
+			<field name="family">5022</field>
+			<field name="name">Productos de cereales y legumbres</field>
+		</record>
+		<record id="dian_unspsc_family_250" model="dian.unspsc.family">
+			<field name="family">5030</field>
+			<field name="name">Fruta fresca</field>
+		</record>
+		<record id="dian_unspsc_family_251" model="dian.unspsc.family">
+			<field name="family">5031</field>
+			<field name="name">Fruta orgánica fresca</field>
+		</record>
+		<record id="dian_unspsc_family_252" model="dian.unspsc.family">
+			<field name="family">5032</field>
+			<field name="name">Fruta seca</field>
+		</record>
+		<record id="dian_unspsc_family_253" model="dian.unspsc.family">
+			<field name="family">5033</field>
+			<field name="name">Fruta orgánica seca</field>
+		</record>
+		<record id="dian_unspsc_family_254" model="dian.unspsc.family">
+			<field name="family">5034</field>
+			<field name="name">Fruta congelada</field>
+		</record>
+		<record id="dian_unspsc_family_255" model="dian.unspsc.family">
+			<field name="family">5035</field>
+			<field name="name">Fruta orgánica congelada</field>
+		</record>
+		<record id="dian_unspsc_family_256" model="dian.unspsc.family">
+			<field name="family">5036</field>
+			<field name="name">Fruta en lata o en frasco</field>
+		</record>
+		<record id="dian_unspsc_family_257" model="dian.unspsc.family">
+			<field name="family">5037</field>
+			<field name="name">Fruta orgánica en lata o en frasco</field>
+		</record>
+		<record id="dian_unspsc_family_258" model="dian.unspsc.family">
+			<field name="family">5038</field>
+			<field name="name">Puré de frutas</field>
+		</record>
+		<record id="dian_unspsc_family_259" model="dian.unspsc.family">
+			<field name="family">5040</field>
+			<field name="name">Vegetales frescos</field>
+		</record>
+		<record id="dian_unspsc_family_260" model="dian.unspsc.family">
+			<field name="family">5041</field>
+			<field name="name">Vegetales orgánicos frescos</field>
+		</record>
+		<record id="dian_unspsc_family_261" model="dian.unspsc.family">
+			<field name="family">5042</field>
+			<field name="name">Vegetales secos</field>
+		</record>
+		<record id="dian_unspsc_family_262" model="dian.unspsc.family">
+			<field name="family">5043</field>
+			<field name="name">Vegetales orgánicos secos</field>
+		</record>
+		<record id="dian_unspsc_family_263" model="dian.unspsc.family">
+			<field name="family">5044</field>
+			<field name="name">Vegetales congelados</field>
+		</record>
+		<record id="dian_unspsc_family_264" model="dian.unspsc.family">
+			<field name="family">5045</field>
+			<field name="name">Vegetales orgánicos congelados</field>
+		</record>
+		<record id="dian_unspsc_family_265" model="dian.unspsc.family">
+			<field name="family">5046</field>
+			<field name="name">Vegetales en lata o en frasco</field>
+		</record>
+		<record id="dian_unspsc_family_266" model="dian.unspsc.family">
+			<field name="family">5047</field>
+			<field name="name">Vegetales orgánicos en lata o en frasco</field>
+		</record>
+		<record id="dian_unspsc_family_267" model="dian.unspsc.family">
+			<field name="family">5110</field>
+			<field name="name">Medicamentos antiinfecciosos</field>
+		</record>
+		<record id="dian_unspsc_family_268" model="dian.unspsc.family">
+			<field name="family">5111</field>
+			<field name="name">Agentes antitumorales</field>
+		</record>
+		<record id="dian_unspsc_family_269" model="dian.unspsc.family">
+			<field name="family">5112</field>
+			<field name="name">Medicamentos cardiovasculares</field>
+		</record>
+		<record id="dian_unspsc_family_270" model="dian.unspsc.family">
+			<field name="family">5113</field>
+			<field name="name">Medicamentos hematólogos</field>
+		</record>
+		<record id="dian_unspsc_family_271" model="dian.unspsc.family">
+			<field name="family">5114</field>
+			<field name="name">Medicamentos para el sistema nervioso central</field>
+		</record>
+		<record id="dian_unspsc_family_272" model="dian.unspsc.family">
+			<field name="family">5115</field>
+			<field name="name">Medicamentos para el sistema nervioso autónomo</field>
+		</record>
+		<record id="dian_unspsc_family_273" model="dian.unspsc.family">
+			<field name="family">5116</field>
+			<field name="name">Medicamentos que afectan al sistema respiratorio</field>
+		</record>
+		<record id="dian_unspsc_family_274" model="dian.unspsc.family">
+			<field name="family">5117</field>
+			<field name="name">Medicamentos que afectan al sistema gastrointestinal</field>
+		</record>
+		<record id="dian_unspsc_family_275" model="dian.unspsc.family">
+			<field name="family">5118</field>
+			<field name="name">Hormonas y antagonistas hormonales</field>
+		</record>
+		<record id="dian_unspsc_family_276" model="dian.unspsc.family">
+			<field name="family">5119</field>
+			<field name="name">Agentes que afectan el agua y los electrolitos</field>
+		</record>
+		<record id="dian_unspsc_family_277" model="dian.unspsc.family">
+			<field name="family">5120</field>
+			<field name="name">Medicamentos inmunomoduladores</field>
+		</record>
+		<record id="dian_unspsc_family_278" model="dian.unspsc.family">
+			<field name="family">5121</field>
+			<field name="name">Categorías de medicamentos varios</field>
+		</record>
+		<record id="dian_unspsc_family_279" model="dian.unspsc.family">
+			<field name="family">5124</field>
+			<field name="name">Fármacos que afectan a los oídos</field>
+		</record>
+		<record id="dian_unspsc_family_280" model="dian.unspsc.family">
+			<field name="family">5125</field>
+			<field name="name">Suplementos alimenticios veterinarios</field>
+		</record>
+		<record id="dian_unspsc_family_281" model="dian.unspsc.family">
+			<field name="family">5210</field>
+			<field name="name">Revestimientos de suelos</field>
+		</record>
+		<record id="dian_unspsc_family_282" model="dian.unspsc.family">
+			<field name="family">5212</field>
+			<field name="name">Ropa de cama</field>
+		</record>
+		<record id="dian_unspsc_family_283" model="dian.unspsc.family">
+			<field name="family">5213</field>
+			<field name="name">Tratamientos de ventanas</field>
+		</record>
+		<record id="dian_unspsc_family_284" model="dian.unspsc.family">
+			<field name="family">5214</field>
+			<field name="name">Aparatos electrodomésticos</field>
+		</record>
+		<record id="dian_unspsc_family_285" model="dian.unspsc.family">
+			<field name="family">5215</field>
+			<field name="name">Utensilios de cocina domésticos</field>
+		</record>
+		<record id="dian_unspsc_family_286" model="dian.unspsc.family">
+			<field name="family">5216</field>
+			<field name="name">Electrónica de consumo</field>
+		</record>
+		<record id="dian_unspsc_family_287" model="dian.unspsc.family">
+			<field name="family">5217</field>
+			<field name="name">Tratamientos de pared doméstica</field>
+		</record>
+		<record id="dian_unspsc_family_288" model="dian.unspsc.family">
+			<field name="family">5310</field>
+			<field name="name">Ropa</field>
+		</record>
+		<record id="dian_unspsc_family_289" model="dian.unspsc.family">
+			<field name="family">5311</field>
+			<field name="name">Calzado</field>
+		</record>
+		<record id="dian_unspsc_family_290" model="dian.unspsc.family">
+			<field name="family">5312</field>
+			<field name="name">Maletas</field>
+		</record>
+		<record id="dian_unspsc_family_291" model="dian.unspsc.family">
+			<field name="family">5313</field>
+			<field name="name">Artículos de tocador y cuidado personal</field>
+		</record>
+		<record id="dian_unspsc_family_292" model="dian.unspsc.family">
+			<field name="family">5314</field>
+			<field name="name">Fuentes y accesorios de costura</field>
+		</record>
+		<record id="dian_unspsc_family_293" model="dian.unspsc.family">
+			<field name="family">5410</field>
+			<field name="name">Joyería</field>
+		</record>
+		<record id="dian_unspsc_family_294" model="dian.unspsc.family">
+			<field name="family">5411</field>
+			<field name="name">Relojes</field>
+		</record>
+		<record id="dian_unspsc_family_295" model="dian.unspsc.family">
+			<field name="family">5412</field>
+			<field name="name">Gemas</field>
+		</record>
+		<record id="dian_unspsc_family_296" model="dian.unspsc.family">
+			<field name="family">5510</field>
+			<field name="name">Medios impresos</field>
+		</record>
+		<record id="dian_unspsc_family_297" model="dian.unspsc.family">
+			<field name="family">5511</field>
+			<field name="name">Material electrónico de referencia</field>
+		</record>
+		<record id="dian_unspsc_family_298" model="dian.unspsc.family">
+			<field name="family">5512</field>
+			<field name="name">Etiquetado y accesorios</field>
+		</record>
+		<record id="dian_unspsc_family_299" model="dian.unspsc.family">
+			<field name="family">5610</field>
+			<field name="name">Muebles de alojamiento</field>
+		</record>
+		<record id="dian_unspsc_family_300" model="dian.unspsc.family">
+			<field name="family">5611</field>
+			<field name="name">Muebles comerciales e industriales</field>
+		</record>
+		<record id="dian_unspsc_family_301" model="dian.unspsc.family">
+			<field name="family">5612</field>
+			<field name="name">Mobiliario institucional</field>
+		</record>
+		<record id="dian_unspsc_family_302" model="dian.unspsc.family">
+			<field name="family">5613</field>
+			<field name="name">Muebles y accesorios para merchandising</field>
+		</record>
+		<record id="dian_unspsc_family_303" model="dian.unspsc.family">
+			<field name="family">5614</field>
+			<field name="name">Adornos para el hogar</field>
+		</record>
+		<record id="dian_unspsc_family_304" model="dian.unspsc.family">
+			<field name="family">6010</field>
+			<field name="name">Materiales didácticos profesionales y de desarrollo y accesorios y suministros</field>
+		</record>
+		<record id="dian_unspsc_family_305" model="dian.unspsc.family">
+			<field name="family">6011</field>
+			<field name="name">Decoraciones y suministros del aula</field>
+		</record>
+		<record id="dian_unspsc_family_306" model="dian.unspsc.family">
+			<field name="family">6012</field>
+			<field name="name">Equipo</field>
+		</record>
+		<record id="dian_unspsc_family_307" model="dian.unspsc.family">
+			<field name="family">6013</field>
+			<field name="name">Instrumentos musicales</field>
+		</record>
+		<record id="dian_unspsc_family_308" model="dian.unspsc.family">
+			<field name="family">6014</field>
+			<field name="name">Juguetes y juegos</field>
+		</record>
+		<record id="dian_unspsc_family_309" model="dian.unspsc.family">
+			<field name="family">7010</field>
+			<field name="name">Pesquerías y acuicultura</field>
+		</record>
+		<record id="dian_unspsc_family_310" model="dian.unspsc.family">
+			<field name="family">7011</field>
+			<field name="name">Horticultura</field>
+		</record>
+		<record id="dian_unspsc_family_311" model="dian.unspsc.family">
+			<field name="family">7012</field>
+			<field name="name">Servicios de animales vivos</field>
+		</record>
+		<record id="dian_unspsc_family_312" model="dian.unspsc.family">
+			<field name="family">7013</field>
+			<field name="name">Preparación</field>
+		</record>
+		<record id="dian_unspsc_family_313" model="dian.unspsc.family">
+			<field name="family">7014</field>
+			<field name="name">Producción</field>
+		</record>
+		<record id="dian_unspsc_family_314" model="dian.unspsc.family">
+			<field name="family">7015</field>
+			<field name="name">Silvicultura</field>
+		</record>
+		<record id="dian_unspsc_family_315" model="dian.unspsc.family">
+			<field name="family">7016</field>
+			<field name="name">Fauna y flora silvestres</field>
+		</record>
+		<record id="dian_unspsc_family_316" model="dian.unspsc.family">
+			<field name="family">7017</field>
+			<field name="name">Desarrollo y vigilancia de recursos hidráulicos</field>
+		</record>
+		<record id="dian_unspsc_family_317" model="dian.unspsc.family">
+			<field name="family">7110</field>
+			<field name="name">Servicios de minería</field>
+		</record>
+		<record id="dian_unspsc_family_318" model="dian.unspsc.family">
+			<field name="family">7111</field>
+			<field name="name">Servicios de perforación y prospección petrolífera y de gas</field>
+		</record>
+		<record id="dian_unspsc_family_319" model="dian.unspsc.family">
+			<field name="family">7112</field>
+			<field name="name">Servicios de construcción y perforación de pozos</field>
+		</record>
+		<record id="dian_unspsc_family_320" model="dian.unspsc.family">
+			<field name="family">7113</field>
+			<field name="name">Servicios de aumento de la extracción y producción de gas y petróleo</field>
+		</record>
+		<record id="dian_unspsc_family_321" model="dian.unspsc.family">
+			<field name="family">7114</field>
+			<field name="name">Servicios de restauración y recuperación de gas y petróleo</field>
+		</record>
+		<record id="dian_unspsc_family_322" model="dian.unspsc.family">
+			<field name="family">7115</field>
+			<field name="name">Servicios de procesamiento y gestión de datos de petróleo y gas</field>
+		</record>
+		<record id="dian_unspsc_family_323" model="dian.unspsc.family">
+			<field name="family">7116</field>
+			<field name="name">Servicios de gerencia de proyectos en pozos de petróleo y gas</field>
+		</record>
+		<record id="dian_unspsc_family_324" model="dian.unspsc.family">
+			<field name="family">7210</field>
+			<field name="name">Servicios de mantenimiento y reparaciones de construcciones e instalaciones</field>
+		</record>
+		<record id="dian_unspsc_family_325" model="dian.unspsc.family">
+			<field name="family">7211</field>
+			<field name="name">Servicios de construcción de edificaciones residenciales</field>
+		</record>
+		<record id="dian_unspsc_family_326" model="dian.unspsc.family">
+			<field name="family">7212</field>
+			<field name="name">Servicios de construcción de edificaciones no residenciales</field>
+		</record>
+		<record id="dian_unspsc_family_327" model="dian.unspsc.family">
+			<field name="family">7214</field>
+			<field name="name">Servicios de construcción pesada</field>
+		</record>
+		<record id="dian_unspsc_family_328" model="dian.unspsc.family">
+			<field name="family">7215</field>
+			<field name="name">Servicios de mantenimiento y construcción de comercio especializado</field>
+		</record>
+		<record id="dian_unspsc_family_329" model="dian.unspsc.family">
+			<field name="family">7310</field>
+			<field name="name">Industrias de plásticos y productos químicos</field>
+		</record>
+		<record id="dian_unspsc_family_330" model="dian.unspsc.family">
+			<field name="family">7311</field>
+			<field name="name">Industrias de la madera y el papel</field>
+		</record>
+		<record id="dian_unspsc_family_331" model="dian.unspsc.family">
+			<field name="family">7312</field>
+			<field name="name">Industrias del metal y de minerales</field>
+		</record>
+		<record id="dian_unspsc_family_332" model="dian.unspsc.family">
+			<field name="family">7313</field>
+			<field name="name">Industrias de alimentos y bebidas</field>
+		</record>
+		<record id="dian_unspsc_family_333" model="dian.unspsc.family">
+			<field name="family">7314</field>
+			<field name="name">Industrias de fibras</field>
+		</record>
+		<record id="dian_unspsc_family_334" model="dian.unspsc.family">
+			<field name="family">7315</field>
+			<field name="name">Servicios de apoyo a la fabricación</field>
+		</record>
+		<record id="dian_unspsc_family_335" model="dian.unspsc.family">
+			<field name="family">7316</field>
+			<field name="name">Fabricación de maquinaria y equipo de transporte</field>
+		</record>
+		<record id="dian_unspsc_family_336" model="dian.unspsc.family">
+			<field name="family">7317</field>
+			<field name="name">Fabricación de productos eléctricos e instrumentos de precisión</field>
+		</record>
+		<record id="dian_unspsc_family_337" model="dian.unspsc.family">
+			<field name="family">7318</field>
+			<field name="name">Servicios de maquinado y procesado</field>
+		</record>
+		<record id="dian_unspsc_family_338" model="dian.unspsc.family">
+			<field name="family">7610</field>
+			<field name="name">Servicios de descontaminación</field>
+		</record>
+		<record id="dian_unspsc_family_339" model="dian.unspsc.family">
+			<field name="family">7611</field>
+			<field name="name">Servicios de aseo y limpieza</field>
+		</record>
+		<record id="dian_unspsc_family_340" model="dian.unspsc.family">
+			<field name="family">7612</field>
+			<field name="name">Eliminación y tratamiento de desechos</field>
+		</record>
+		<record id="dian_unspsc_family_341" model="dian.unspsc.family">
+			<field name="family">7613</field>
+			<field name="name">Limpieza de residuos tóxicos y peligrosos</field>
+		</record>
+		<record id="dian_unspsc_family_342" model="dian.unspsc.family">
+			<field name="family">7710</field>
+			<field name="name">Gestión medioambiental</field>
+		</record>
+		<record id="dian_unspsc_family_343" model="dian.unspsc.family">
+			<field name="family">7711</field>
+			<field name="name">Protección medioambiental</field>
+		</record>
+		<record id="dian_unspsc_family_344" model="dian.unspsc.family">
+			<field name="family">7712</field>
+			<field name="name">Seguimiento</field>
+		</record>
+		<record id="dian_unspsc_family_345" model="dian.unspsc.family">
+			<field name="family">7713</field>
+			<field name="name">Servicios de seguimiento</field>
+		</record>
+		<record id="dian_unspsc_family_346" model="dian.unspsc.family">
+			<field name="family">7810</field>
+			<field name="name">Transporte de correo y carga</field>
+		</record>
+		<record id="dian_unspsc_family_347" model="dian.unspsc.family">
+			<field name="family">7811</field>
+			<field name="name">Transporte de pasajeros</field>
+		</record>
+		<record id="dian_unspsc_family_348" model="dian.unspsc.family">
+			<field name="family">7812</field>
+			<field name="name">Manejo y embalaje de material</field>
+		</record>
+		<record id="dian_unspsc_family_349" model="dian.unspsc.family">
+			<field name="family">7813</field>
+			<field name="name">Almacenaje</field>
+		</record>
+		<record id="dian_unspsc_family_350" model="dian.unspsc.family">
+			<field name="family">7814</field>
+			<field name="name">Servicios de transporte</field>
+		</record>
+		<record id="dian_unspsc_family_351" model="dian.unspsc.family">
+			<field name="family">7818</field>
+			<field name="name">Servicios de mantenimiento o reparaciones de transportes</field>
+		</record>
+		<record id="dian_unspsc_family_352" model="dian.unspsc.family">
+			<field name="family">8010</field>
+			<field name="name">Servicios de asesoría de gestión</field>
+		</record>
+		<record id="dian_unspsc_family_353" model="dian.unspsc.family">
+			<field name="family">8011</field>
+			<field name="name">Servicios de recursos humanos</field>
+		</record>
+		<record id="dian_unspsc_family_354" model="dian.unspsc.family">
+			<field name="family">8012</field>
+			<field name="name">Servicios legales</field>
+		</record>
+		<record id="dian_unspsc_family_355" model="dian.unspsc.family">
+			<field name="family">8013</field>
+			<field name="name">Servicios inmobiliarios</field>
+		</record>
+		<record id="dian_unspsc_family_356" model="dian.unspsc.family">
+			<field name="family">8014</field>
+			<field name="name">Comercialización y distribución</field>
+		</record>
+		<record id="dian_unspsc_family_357" model="dian.unspsc.family">
+			<field name="family">8015</field>
+			<field name="name">Política comercial y servicios</field>
+		</record>
+		<record id="dian_unspsc_family_358" model="dian.unspsc.family">
+			<field name="family">8016</field>
+			<field name="name">Servicios de administración de empresas</field>
+		</record>
+		<record id="dian_unspsc_family_359" model="dian.unspsc.family">
+			<field name="family">8110</field>
+			<field name="name">Servicios profesionales de ingeniería</field>
+		</record>
+		<record id="dian_unspsc_family_360" model="dian.unspsc.family">
+			<field name="family">8111</field>
+			<field name="name">Servicios informáticos</field>
+		</record>
+		<record id="dian_unspsc_family_361" model="dian.unspsc.family">
+			<field name="family">8112</field>
+			<field name="name">Economía</field>
+		</record>
+		<record id="dian_unspsc_family_362" model="dian.unspsc.family">
+			<field name="family">8113</field>
+			<field name="name">Estadística</field>
+		</record>
+		<record id="dian_unspsc_family_363" model="dian.unspsc.family">
+			<field name="family">8114</field>
+			<field name="name">Tecnologías de fabricación</field>
+		</record>
+		<record id="dian_unspsc_family_364" model="dian.unspsc.family">
+			<field name="family">8115</field>
+			<field name="name">Servicios de pedología</field>
+		</record>
+		<record id="dian_unspsc_family_365" model="dian.unspsc.family">
+			<field name="family">8116</field>
+			<field name="name">Entrega de servicios de tecnología de información</field>
+		</record>
+		<record id="dian_unspsc_family_366" model="dian.unspsc.family">
+			<field name="family">8210</field>
+			<field name="name">Publicidad</field>
+		</record>
+		<record id="dian_unspsc_family_367" model="dian.unspsc.family">
+			<field name="family">8211</field>
+			<field name="name">Escritura y traducciones</field>
+		</record>
+		<record id="dian_unspsc_family_368" model="dian.unspsc.family">
+			<field name="family">8212</field>
+			<field name="name">Servicios de reproducción</field>
+		</record>
+		<record id="dian_unspsc_family_369" model="dian.unspsc.family">
+			<field name="family">8213</field>
+			<field name="name">Servicios fotográficos</field>
+		</record>
+		<record id="dian_unspsc_family_370" model="dian.unspsc.family">
+			<field name="family">8214</field>
+			<field name="name">Diseño gráfico</field>
+		</record>
+		<record id="dian_unspsc_family_371" model="dian.unspsc.family">
+			<field name="family">8215</field>
+			<field name="name">Artistas e intérpretes profesionales</field>
+		</record>
+		<record id="dian_unspsc_family_372" model="dian.unspsc.family">
+			<field name="family">8310</field>
+			<field name="name">Servicios públicos</field>
+		</record>
+		<record id="dian_unspsc_family_373" model="dian.unspsc.family">
+			<field name="family">8311</field>
+			<field name="name">Servicios de medios de telecomunicaciones</field>
+		</record>
+		<record id="dian_unspsc_family_374" model="dian.unspsc.family">
+			<field name="family">8312</field>
+			<field name="name">Servicios de información</field>
+		</record>
+		<record id="dian_unspsc_family_375" model="dian.unspsc.family">
+			<field name="family">8410</field>
+			<field name="name">Finanzas de desarrollo</field>
+		</record>
+		<record id="dian_unspsc_family_376" model="dian.unspsc.family">
+			<field name="family">8411</field>
+			<field name="name">Servicios de contabilidad y auditorias</field>
+		</record>
+		<record id="dian_unspsc_family_377" model="dian.unspsc.family">
+			<field name="family">8412</field>
+			<field name="name">Banca e inversiones</field>
+		</record>
+		<record id="dian_unspsc_family_378" model="dian.unspsc.family">
+			<field name="family">8413</field>
+			<field name="name">Servicios de seguros y pensiones</field>
+		</record>
+		<record id="dian_unspsc_family_379" model="dian.unspsc.family">
+			<field name="family">8414</field>
+			<field name="name">Agencias de crédito</field>
+		</record>
+		<record id="dian_unspsc_family_380" model="dian.unspsc.family">
+			<field name="family">8510</field>
+			<field name="name">Servicios integrales de salud</field>
+		</record>
+		<record id="dian_unspsc_family_381" model="dian.unspsc.family">
+			<field name="family">8511</field>
+			<field name="name">Prevención y control de enfermedades</field>
+		</record>
+		<record id="dian_unspsc_family_382" model="dian.unspsc.family">
+			<field name="family">8512</field>
+			<field name="name">Práctica médica</field>
+		</record>
+		<record id="dian_unspsc_family_383" model="dian.unspsc.family">
+			<field name="family">8513</field>
+			<field name="name">Ciencia médica</field>
+		</record>
+		<record id="dian_unspsc_family_384" model="dian.unspsc.family">
+			<field name="family">8514</field>
+			<field name="name">Medicina alternativa y holística</field>
+		</record>
+		<record id="dian_unspsc_family_385" model="dian.unspsc.family">
+			<field name="family">8515</field>
+			<field name="name">Servicios alimenticios y de nutrición</field>
+		</record>
+		<record id="dian_unspsc_family_386" model="dian.unspsc.family">
+			<field name="family">8516</field>
+			<field name="name">Servicios de mantenimiento</field>
+		</record>
+		<record id="dian_unspsc_family_387" model="dian.unspsc.family">
+			<field name="family">8517</field>
+			<field name="name">Servicios de muerte y soporte al fallecimiento</field>
+		</record>
+		<record id="dian_unspsc_family_388" model="dian.unspsc.family">
+			<field name="family">8610</field>
+			<field name="name">Formación profesional</field>
+		</record>
+		<record id="dian_unspsc_family_389" model="dian.unspsc.family">
+			<field name="family">8611</field>
+			<field name="name">Sistemas educativos alternativos</field>
+		</record>
+		<record id="dian_unspsc_family_390" model="dian.unspsc.family">
+			<field name="family">8612</field>
+			<field name="name">Instituciones educativas</field>
+		</record>
+		<record id="dian_unspsc_family_391" model="dian.unspsc.family">
+			<field name="family">8613</field>
+			<field name="name">Servicios educativos especializados</field>
+		</record>
+		<record id="dian_unspsc_family_392" model="dian.unspsc.family">
+			<field name="family">8614</field>
+			<field name="name">Instalaciones educativas</field>
+		</record>
+		<record id="dian_unspsc_family_393" model="dian.unspsc.family">
+			<field name="family">9010</field>
+			<field name="name">Restaurantes y catering (servicios de comidas y bebidas)</field>
+		</record>
+		<record id="dian_unspsc_family_394" model="dian.unspsc.family">
+			<field name="family">9011</field>
+			<field name="name">Instalaciones hoteleras</field>
+		</record>
+		<record id="dian_unspsc_family_395" model="dian.unspsc.family">
+			<field name="family">9012</field>
+			<field name="name">Facilitación de viajes</field>
+		</record>
+		<record id="dian_unspsc_family_396" model="dian.unspsc.family">
+			<field name="family">9013</field>
+			<field name="name">Artes interpretativas</field>
+		</record>
+		<record id="dian_unspsc_family_397" model="dian.unspsc.family">
+			<field name="family">9014</field>
+			<field name="name">Deportes comerciales</field>
+		</record>
+		<record id="dian_unspsc_family_398" model="dian.unspsc.family">
+			<field name="family">9015</field>
+			<field name="name">Servicios de entretenimiento</field>
+		</record>
+		<record id="dian_unspsc_family_399" model="dian.unspsc.family">
+			<field name="family">9110</field>
+			<field name="name">Aspecto personal</field>
+		</record>
+		<record id="dian_unspsc_family_400" model="dian.unspsc.family">
+			<field name="family">9111</field>
+			<field name="name">Asistencia doméstica y personal</field>
+		</record>
+		<record id="dian_unspsc_family_401" model="dian.unspsc.family">
+			<field name="family">9210</field>
+			<field name="name">Orden público y seguridad</field>
+		</record>
+		<record id="dian_unspsc_family_402" model="dian.unspsc.family">
+			<field name="family">9211</field>
+			<field name="name">Servicios militares o defensa nacional</field>
+		</record>
+		<record id="dian_unspsc_family_403" model="dian.unspsc.family">
+			<field name="family">9212</field>
+			<field name="name">Seguridad y protección personal</field>
+		</record>
+		<record id="dian_unspsc_family_404" model="dian.unspsc.family">
+			<field name="family">9310</field>
+			<field name="name">Sistemas e instituciones políticas</field>
+		</record>
+		<record id="dian_unspsc_family_405" model="dian.unspsc.family">
+			<field name="family">9311</field>
+			<field name="name">Condiciones sociopolíticas</field>
+		</record>
+		<record id="dian_unspsc_family_406" model="dian.unspsc.family">
+			<field name="family">9312</field>
+			<field name="name">Relaciones internacionales</field>
+		</record>
+		<record id="dian_unspsc_family_407" model="dian.unspsc.family">
+			<field name="family">9313</field>
+			<field name="name">Ayuda y asistencia humanitaria</field>
+		</record>
+		<record id="dian_unspsc_family_408" model="dian.unspsc.family">
+			<field name="family">9314</field>
+			<field name="name">Servicios comunitarios y sociales</field>
+		</record>
+		<record id="dian_unspsc_family_409" model="dian.unspsc.family">
+			<field name="family">9315</field>
+			<field name="name">Servicios de administración y financiación pública</field>
+		</record>
+		<record id="dian_unspsc_family_410" model="dian.unspsc.family">
+			<field name="family">9316</field>
+			<field name="name">Tributación</field>
+		</record>
+		<record id="dian_unspsc_family_411" model="dian.unspsc.family">
+			<field name="family">9317</field>
+			<field name="name">Política y regulación comercial</field>
+		</record>
+		<record id="dian_unspsc_family_412" model="dian.unspsc.family">
+			<field name="family">9410</field>
+			<field name="name">Organizaciones laborales</field>
+		</record>
+		<record id="dian_unspsc_family_413" model="dian.unspsc.family">
+			<field name="family">9411</field>
+			<field name="name">Organizaciones religiosas</field>
+		</record>
+		<record id="dian_unspsc_family_414" model="dian.unspsc.family">
+			<field name="family">9412</field>
+			<field name="name">Clubes</field>
+		</record>
+		<record id="dian_unspsc_family_415" model="dian.unspsc.family">
+			<field name="family">9413</field>
+			<field name="name">Organizaciones</field>
+		</record>
+		<record id="dian_unspsc_family_416" model="dian.unspsc.family">
+			<field name="family">9510</field>
+			<field name="name">Parcelas de tierra</field>
+		</record>
+		<record id="dian_unspsc_family_417" model="dian.unspsc.family">
+			<field name="family">9511</field>
+			<field name="name">Vías</field>
+		</record>
+		<record id="dian_unspsc_family_418" model="dian.unspsc.family">
+			<field name="family">9512</field>
+			<field name="name">Estructuras y edificios permanentes</field>
+		</record>
+		<record id="dian_unspsc_family_419" model="dian.unspsc.family">
+			<field name="family">9513</field>
+			<field name="name">Estructuras y edificios móviles</field>
+		</record>
+		<record id="dian_unspsc_family_420" model="dian.unspsc.family">
+			<field name="family">9514</field>
+			<field name="name">Estructuras y edificios prefabricados</field>
+		</record>
+
+	</data>
+</odoo>
