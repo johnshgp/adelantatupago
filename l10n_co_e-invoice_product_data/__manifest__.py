@@ -13,6 +13,7 @@
 		'data/data_family.xml',
 		'data/data_segment.xml',
 		'data/data_producto.xml',
+		'views/menu_data.xml',
 	],
 	'demo': [
 		],
