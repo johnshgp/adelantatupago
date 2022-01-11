@@ -18,7 +18,7 @@ class AccountPaymentInherit(models.Model):
                 #Diario a utilizar
                 diario = rec.env['account.journal'].browse(int(rec.env['ir.config_parameter'].sudo().get_param('adelantatupago.journal_def')))
 
-                line_cliente =(0, 0, {'account_id': rec.partner_id.property_account_payable_id.id,
+                line_cliente =(0, 0, {'account_id': rec.destination_account_id.id,
                                 'partner_id': rec.partner_id.id,
                                 'credit': rec.amount})
                 move_line_vals.append(line_cliente)
