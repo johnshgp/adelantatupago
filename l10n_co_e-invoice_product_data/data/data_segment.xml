@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data noupdate="1">
+
+		<record id="dian_unspsc_segment_1" model="dian.unspsc.segment">
+			<field name="segment">10</field>
+			<field name="name">Material Vivo Vegetal y Animal</field>
+		</record>
+		<record id="dian_unspsc_segment_2" model="dian.unspsc.segment">
+			<field name="segment">11</field>
+			<field name="name">Material Mineral</field>
+		</record>
+		<record id="dian_unspsc_segment_3" model="dian.unspsc.segment">
+			<field name="segment">12</field>
+			<field name="name">Material Químico incluyendo Bioquímicos y Materiales de Gas</field>
+		</record>
+		<record id="dian_unspsc_segment_4" model="dian.unspsc.segment">
+			<field name="segment">13</field>
+			<field name="name">Materiales de Resina</field>
+		</record>
+		<record id="dian_unspsc_segment_5" model="dian.unspsc.segment">
+			<field name="segment">14</field>
+			<field name="name">Materiales y Productos de Papel</field>
+		</record>
+		<record id="dian_unspsc_segment_6" model="dian.unspsc.segment">
+			<field name="segment">15</field>
+			<field name="name">Materiales Combustibles</field>
+		</record>
+		<record id="dian_unspsc_segment_7" model="dian.unspsc.segment">
+			<field name="segment">20</field>
+			<field name="name">Maquinaria y Accesorios de Minería y Perforación de Pozos</field>
+		</record>
+		<record id="dian_unspsc_segment_8" model="dian.unspsc.segment">
+			<field name="segment">21</field>
+			<field name="name">Maquinaria y Accesorios para Agricultura</field>
+		</record>
+		<record id="dian_unspsc_segment_9" model="dian.unspsc.segment">
+			<field name="segment">22</field>
+			<field name="name">Maquinaria y Accesorios para Construcción y Edificación</field>
+		</record>
+		<record id="dian_unspsc_segment_10" model="dian.unspsc.segment">
+			<field name="segment">23</field>
+			<field name="name">Maquinaria y Accesorios para Manufactura y Procesamiento Industrial</field>
+		</record>
+		<record id="dian_unspsc_segment_11" model="dian.unspsc.segment">
+			<field name="segment">24</field>
+			<field name="name">Maquinaria</field>
+		</record>
+		<record id="dian_unspsc_segment_12" model="dian.unspsc.segment">
+			<field name="segment">25</field>
+			<field name="name">Vehículos Comerciales</field>
+		</record>
+		<record id="dian_unspsc_segment_13" model="dian.unspsc.segment">
+			<field name="segment">26</field>
+			<field name="name">Maquinaria y Accesorios para Generación y Distribución de Energía</field>
+		</record>
+		<record id="dian_unspsc_segment_14" model="dian.unspsc.segment">
+			<field name="segment">27</field>
+			<field name="name">Herramientas y Maquinaria General</field>
+		</record>
+		<record id="dian_unspsc_segment_15" model="dian.unspsc.segment">
+			<field name="segment">30</field>
+			<field name="name">Componentes y Suministros para Estructuras</field>
+		</record>
+		<record id="dian_unspsc_segment_16" model="dian.unspsc.segment">
+			<field name="segment">31</field>
+			<field name="name">Componentes y Suministros de Manufactura</field>
+		</record>
+		<record id="dian_unspsc_segment_17" model="dian.unspsc.segment">
+			<field name="segment">32</field>
+			<field name="name">Componentes y Suministros Electrónicos</field>
+		</record>
+		<record id="dian_unspsc_segment_18" model="dian.unspsc.segment">
+			<field name="segment">39</field>
+			<field name="name">Componentes</field>
+		</record>
+		<record id="dian_unspsc_segment_19" model="dian.unspsc.segment">
+			<field name="segment">40</field>
+			<field name="name">Componentes y Equipos para Distribución y Sistemas de Acondicionamiento</field>
+		</record>
+		<record id="dian_unspsc_segment_20" model="dian.unspsc.segment">
+			<field name="segment">41</field>
+			<field name="name">Equipos y Suministros de Laboratorio</field>
+		</record>
+		<record id="dian_unspsc_segment_21" model="dian.unspsc.segment">
+			<field name="segment">42</field>
+			<field name="name">Equipo Médico</field>
+		</record>
+		<record id="dian_unspsc_segment_22" model="dian.unspsc.segment">
+			<field name="segment">43</field>
+			<field name="name">Difusión de Tecnologías de Información y Telecomunicaciones</field>
+		</record>
+		<record id="dian_unspsc_segment_23" model="dian.unspsc.segment">
+			<field name="segment">44</field>
+			<field name="name">Equipos de Oficina</field>
+		</record>
+		<record id="dian_unspsc_segment_24" model="dian.unspsc.segment">
+			<field name="segment">45</field>
+			<field name="name">Equipos y Suministros para Impresión</field>
+		</record>
+		<record id="dian_unspsc_segment_25" model="dian.unspsc.segment">
+			<field name="segment">46</field>
+			<field name="name">Equipos y Suministros de Defensa</field>
+		</record>
+		<record id="dian_unspsc_segment_26" model="dian.unspsc.segment">
+			<field name="segment">47</field>
+			<field name="name">Equipos de Limpieza y Suministros</field>
+		</record>
+		<record id="dian_unspsc_segment_27" model="dian.unspsc.segment">
+			<field name="segment">48</field>
+			<field name="name">Maquinaria</field>
+		</record>
+		<record id="dian_unspsc_segment_28" model="dian.unspsc.segment">
+			<field name="segment">49</field>
+			<field name="name">Equipos</field>
+		</record>
+		<record id="dian_unspsc_segment_29" model="dian.unspsc.segment">
+			<field name="segment">50</field>
+			<field name="name">Alimentos</field>
+		</record>
+		<record id="dian_unspsc_segment_30" model="dian.unspsc.segment">
+			<field name="segment">51</field>
+			<field name="name">Medicamentos y Productos Farmacéuticos</field>
+		</record>
+		<record id="dian_unspsc_segment_31" model="dian.unspsc.segment">
+			<field name="segment">52</field>
+			<field name="name">Artículos Domésticos</field>
+		</record>
+		<record id="dian_unspsc_segment_32" model="dian.unspsc.segment">
+			<field name="segment">53</field>
+			<field name="name">Ropa</field>
+		</record>
+		<record id="dian_unspsc_segment_33" model="dian.unspsc.segment">
+			<field name="segment">54</field>
+			<field name="name">Productos para Relojería</field>
+		</record>
+		<record id="dian_unspsc_segment_34" model="dian.unspsc.segment">
+			<field name="segment">55</field>
+			<field name="name">Publicaciones Impresas</field>
+		</record>
+		<record id="dian_unspsc_segment_35" model="dian.unspsc.segment">
+			<field name="segment">56</field>
+			<field name="name">Muebles</field>
+		</record>
+		<record id="dian_unspsc_segment_36" model="dian.unspsc.segment">
+			<field name="segment">60</field>
+			<field name="name">Instrumentos Musicales</field>
+		</record>
+		<record id="dian_unspsc_segment_37" model="dian.unspsc.segment">
+			<field name="segment">70</field>
+			<field name="name">Servicios de Contratacion Agrícola</field>
+		</record>
+		<record id="dian_unspsc_segment_38" model="dian.unspsc.segment">
+			<field name="segment">70</field>
+			<field name="name">Servicios de Contratación Agrícola</field>
+		</record>
+		<record id="dian_unspsc_segment_39" model="dian.unspsc.segment">
+			<field name="segment">71</field>
+			<field name="name">Servicios de Minería</field>
+		</record>
+		<record id="dian_unspsc_segment_40" model="dian.unspsc.segment">
+			<field name="segment">72</field>
+			<field name="name">Servicios de Edificación</field>
+		</record>
+		<record id="dian_unspsc_segment_41" model="dian.unspsc.segment">
+			<field name="segment">73</field>
+			<field name="name">Servicios de Producción Industrial y Manufactura</field>
+		</record>
+		<record id="dian_unspsc_segment_42" model="dian.unspsc.segment">
+			<field name="segment">76</field>
+			<field name="name">Servicios de Limpieza</field>
+		</record>
+		<record id="dian_unspsc_segment_43" model="dian.unspsc.segment">
+			<field name="segment">77</field>
+			<field name="name">Servicios Medioambientales</field>
+		</record>
+		<record id="dian_unspsc_segment_44" model="dian.unspsc.segment">
+			<field name="segment">78</field>
+			<field name="name">Servicios de Transporte</field>
+		</record>
+		<record id="dian_unspsc_segment_45" model="dian.unspsc.segment">
+			<field name="segment">80</field>
+			<field name="name">Servicios de Gestión</field>
+		</record>
+		<record id="dian_unspsc_segment_46" model="dian.unspsc.segment">
+			<field name="segment">81</field>
+			<field name="name">Servicios Basados en Ingeniería</field>
+		</record>
+		<record id="dian_unspsc_segment_47" model="dian.unspsc.segment">
+			<field name="segment">82</field>
+			<field name="name">Servicios Editoriales</field>
+		</record>
+		<record id="dian_unspsc_segment_48" model="dian.unspsc.segment">
+			<field name="segment">83</field>
+			<field name="name">Servicios Públicos y Servicios Relacionados con el Sector Público</field>
+		</record>
+		<record id="dian_unspsc_segment_49" model="dian.unspsc.segment">
+			<field name="segment">84</field>
+			<field name="name">Servicios Financieros y de Seguros</field>
+		</record>
+		<record id="dian_unspsc_segment_50" model="dian.unspsc.segment">
+			<field name="segment">85</field>
+			<field name="name">Servicios de Salud</field>
+		</record>
+		<record id="dian_unspsc_segment_51" model="dian.unspsc.segment">
+			<field name="segment">86</field>
+			<field name="name">Servicios Educativos y de Formación</field>
+		</record>
+		<record id="dian_unspsc_segment_52" model="dian.unspsc.segment">
+			<field name="segment">90</field>
+			<field name="name">Servicios de Viajes</field>
+		</record>
+		<record id="dian_unspsc_segment_53" model="dian.unspsc.segment">
+			<field name="segment">91</field>
+			<field name="name">Servicios Personales y Domésticos</field>
+		</record>
+		<record id="dian_unspsc_segment_54" model="dian.unspsc.segment">
+			<field name="segment">92</field>
+			<field name="name">Servicios de Defensa Nacional</field>
+		</record>
+		<record id="dian_unspsc_segment_55" model="dian.unspsc.segment">
+			<field name="segment">93</field>
+			<field name="name">Servicios Políticos y de Asuntos Cívicos</field>
+		</record>
+		<record id="dian_unspsc_segment_56" model="dian.unspsc.segment">
+			<field name="segment">94</field>
+			<field name="name">Organizaciones y Clubes</field>
+		</record>
+		<record id="dian_unspsc_segment_57" model="dian.unspsc.segment">
+			<field name="segment">95</field>
+			<field name="name">Terrenos</field>
+		</record>
+
+	</data>
+</odoo>

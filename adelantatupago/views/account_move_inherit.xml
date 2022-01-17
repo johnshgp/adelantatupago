@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <data>
+
+        <record id="invoice_form_extended_ter_relacionado_button" model="ir.ui.view">
+            <field name="name">account.move.inherit.ter.relacionado.button</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_move_form"></field>
+            <field name="arch" type="xml">
+
+                <button name="action_register_payment" position="after">
+                    <field name="pago_tercero_creado" invisible="1" />
+                    <button string="Pasar pago a tercero" type="object" class="oe_highlight" name="pago_tercero" attrs="{'invisible':['|','|',('move_type','=','entry'),('pago_tercero_creado','=',True),('tercero_relacionado','=',False)]}"/>
+
+                </button>
+            
+            </field>
+        </record>
+    
+    </data>
+
+</odoo>

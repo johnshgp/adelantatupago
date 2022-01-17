@@ -7,6 +7,7 @@ import csv
 from datetime import date as dt
 
 
+
 class ImportClients(models.Model):
     _name = 'import.clients'
     _description = 'import.clients'
@@ -31,7 +32,7 @@ class ImportClients(models.Model):
             if self.skip_first_line and i == 0:
                 continue
             lista = line.split(self.delimiter)
-            if len(lista) == 17:
+            if len(lista) > 17:
                 is_company = lista[0]
                 personType = lista[1]
                 l10n_latam_identification_type_id = lista[2]
@@ -46,10 +47,10 @@ class ImportClients(models.Model):
                 cp_client = lista[11]
                 pais_client = lista[12]
                 rfiscal = lista[13]
-
-                tributos = lista[14]
-                telefono = lista[15]
-                mobil = lista[16]
+                cuenta_por_cobrar = lista[14]
+                tributos = lista[15]
+                telefono = lista[16]
+                mobil = lista[17]
 
                 vals.clear()
 
@@ -59,47 +60,80 @@ class ImportClients(models.Model):
                     
                     # Carga vals
                     if is_company != '': 
-                        if is_company == 'Compania':
+                        if is_company == 'Compania' or is_company == 'Compañia' or is_company == 'Compañía':
                             vals['is_company'] = True
                         elif is_company == 'Usuario':
                             vals['is_company'] = False
                         else:
                             raise ValidationError("El CSV no se procesara por estar mal formado en la linea {0}, la primera columna que refiere a el tipo de cliete tiene que ser Compania o Usuario, contenido de linea: {1}".format(i, line))
                     if personType != '':  
-                        if personType == 'Juridica':
+                        if personType == 'Juridica' or personType == 'Jurídica':
                             vals['personType'] = '2'
                         elif personType == 'Natural':
                             vals['personType'] = '1'
                         else:
                             raise ValidationError("El CSV no se procesara por estar mal formado en la linea {0}, la columna Tipo de Persona tiene que ser Juridica o Natural, contenido de linea: {1}".format(i, line))
-                    if vat_client != '': vals['vat'] = vat_client
+                    if vat_client != '': 
+                        characters = "."
+                        for x in range(len(characters)):
+                            vat_client = vat_client.replace(characters[x],"")
+                        if len(vat_client.split('-',2))>1:
+                             vat_client = vat_client.split('-',2)[0]
+                        vals['vat'] = vat_client
                     if email_client != '': vals['email'] = email_client
+                    else:
+                        raise ValidationError("El CSV no se procesara por falta de email en la linea {0}, contenido de linea: {1}".format(i, line))
                     if nombres_client != '': 
                         vals['x_name1'] = nombres_client.split(' ',2)[0]
-                        _snombre = nombres_client.split(' ',2)[1]
-                        if _snombre != '':
-                            vals['x_name2'] = _snombre
-                        vals['name'] = nombres_client + ' ' + apellidos_client
+                        if len(nombres_client.split(' ',2)) > 1:
+                            _snombre = nombres_client.split(' ',2)[1]
+                            if _snombre != '':
+                                vals['x_name2'] = _snombre
+                        if apellidos_client != '':     
+                            vals['name'] = nombres_client + ' ' + apellidos_client
+                        else:
+                            vals['name'] = nombres_client
+                    elif not is_company == 'Compania' and not is_company == 'Compañia' and not is_company == 'Compañía':
+                        raise ValidationError("El CSV no se procesara porque es necesario el primer nombre en la linea {0}, contenido de linea: {1}".format(i, line))
+
                     if apellidos_client != '': 
                         vals['x_lastname1'] = apellidos_client.split(' ',2)[0]
-                        _sapellido = apellidos_client.split(' ',2)[1]
-                        if _sapellido != '':
-                            vals['x_lastname2'] = _sapellido
-                    if razon_social != '': vals['companyName'] = razon_social
+                        if len(apellidos_client.split(' ',2)) > 1:
+                            _sapellido = apellidos_client.split(' ',2)[1]
+                            if _sapellido != '':
+                                vals['x_lastname2'] = _sapellido
+                    elif not is_company == 'Compania' and not is_company == 'Compañia' and not is_company == 'Compañía':
+                        raise ValidationError("El CSV no se procesara porque es necesario el primer apellido en la linea {0}, contenido de linea: {1}".format(i, line))
+                    if razon_social != '': 
+                        vals['companyName'] = razon_social
+                        vals['name'] = razon_social
+                    elif is_company == 'Compania' or is_company == 'Compañia' or is_company == 'Compañía':
+                        raise ValidationError("El CSV no se procesara porque es necesario una razon social en la linea {0}, contenido de linea: {1}".format(i, line))
+
                     if calle != '': vals['street'] = calle
+                    else:
+                        raise ValidationError("El CSV no se procesara porque es necesario una direccion en la linea {0}, contenido de linea: {1}".format(i, line))
+                    
                     # Seleccion de pais
                     if pais_client != '': 
                         tmp_pais_id = 0
                         tmp_pais_id = self.env['res.country'].search([('name','=ilike',pais_client)]).id
                         if tmp_pais_id != 0: vals['country_id'] = tmp_pais_id
+                        else:
+                            raise ValidationError("El CSV no se procesara por que no se encuentra el pais {0} en la linea {1}, contenido de linea: {2}".format(pais_client, i, line))
                         if tmp_pais_id != 0 and estado_client != '':
                             tmp_estado_id = 0
                             tmp_estado_id = self.env['res.country.state'].search([('name','=ilike',estado_client)]).id
                             if tmp_estado_id != 0: vals['state_id'] = tmp_estado_id
+                            else:
+                                raise ValidationError("El CSV no se procesara por que no se encuentra el estado {0} en la linea {1}, contenido de linea: {2}".format(estado_client, i, line))
                             if tmp_estado_id != 0 and ciudad_client != '':
                                 tmp_ciudad_id = 0
                                 tmp_ciudad_id = self.env['res.country.state.city'].search([('name','=ilike',ciudad_client)]).id
                                 if tmp_ciudad_id != 0: vals['xcity'] = tmp_ciudad_id
+                                else:
+                                    raise ValidationError("El CSV no se procesara por que no se encuentra la ciudad {0} en la linea {1}, contenido de linea: {2}".format(ciudad_client, i, line))
+                            
                     if cp_client != '': 
                         vals['zip'] = cp_client
                     # Seleccion de Tipo de Identificacion
@@ -129,7 +163,8 @@ class ImportClients(models.Model):
                             tmp_identification_id = self.env['l10n_latam.identification.type'].search([('name','=','INACTIVO - Cédula')]).id
                         elif l10n_latam_identification_type_id == 'PA':
                             tmp_identification_id = self.env['l10n_latam.identification.type'].search([('name','=','Pasaporte')]).id
-
+                        else:
+                            raise ValidationError("El CSV no se procesara por que no se encuentra el tipo de identificacion {0} en la linea {1}, contenido de linea: {2}".format(l10n_latam_identification_type_id, i, line))
 
                         if tmp_identification_id != 0: vals['l10n_latam_identification_type_id'] = tmp_identification_id
                     
@@ -146,8 +181,20 @@ class ImportClients(models.Model):
                             tmp_fiscal_id = self.env['dian.fiscal.responsability'].search([('name','=ilike', 'Régimen Simple de Tributación')]).id
                         elif rfiscal == 'R-99-PN':
                             tmp_fiscal_id = self.env['dian.fiscal.responsability'].search([('name','=ilike', 'No responsable')]).id
-                            
+                        else:
+                            raise ValidationError("El CSV no se procesara por que no se encuentra Responsabilidad Fiscal {0} en la linea {1}, contenido de linea: {2}".format(rfiscal, i, line))
+
                         if tmp_fiscal_id != 0: vals['fiscal_responsability_ids'] = [(4,tmp_fiscal_id)]
+
+                    if cuenta_por_cobrar != '':
+                        ccobrar_id = self.env['account.account'].search([('code','=', cuenta_por_cobrar)]).id
+                        if ccobrar_id:
+                            vals['property_account_receivable_id'] = ccobrar_id
+                        else:
+                            raise ValidationError("El CSV no se procesara por que no se encuentra Cuenta por Cobrar {0} en la linea {1}, contenido de linea: {2}".format(cuenta_por_cobrar, i, line))
+                    else:
+                        raise ValidationError("El CSV no se procesara por que no se encuentra Cuenta por Cobrar {0} en la linea {1}, contenido de linea: {2}".format(cuenta_por_cobrar, i, line))
+
                             
 
                     # Seleccion de Tributo
@@ -167,12 +214,14 @@ class ImportClients(models.Model):
 
                     if telefono != '': vals['phone'] = telefono
                     if mobil != '': vals['mobile'] = mobil
-                    self.env['res.partner'].create(vals)
+                    self.env['res.partner'].sudo().create(vals)
                     _procesados += "{} \n".format(vat_client)
                 else:
                     _noprocesados += "{} \n".format(vat_client)
+            elif len(lista) == 1:
+                continue
             else:
-                raise ValidationError("El CSV no se procesara por estar mal formado en la linea {0}, contenido de linea: {1}".format(i, line))
+                raise ValidationError("El CSV no se procesara por estar mal formado en la linea {0}, contenido de linea: {1}. Se necesitan al menos 18 columnas".format(i, line))
         self.clientes_creados = _procesados
         self.not_processed_content = _noprocesados
         self.state = 'processed'

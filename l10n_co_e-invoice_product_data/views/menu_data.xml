@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <!-- Menu calse productos -->
+    <record model="ir.ui.view" id="calse_unspsc_tree">
+        <field name="name">dian.unspsc.class.view.tree</field>
+        <field name="model">dian.unspsc.class</field>
+        <field name="arch" type="xml">
+            <tree string="Clase UNSPSC">
+                <field name="name" />
+                <field name="classe" />
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_calse_unspsc">
+        <field name="name">Clase UNSPSC</field>
+        <field name="res_model">dian.unspsc.class</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <menuitem name="Clase UNSPSC" id="menu_calse_unspsc" parent="account.menu_finance_configuration" action="action_calse_unspsc" sequence="100" />
+
+
+    <!-- Menu Familia productos -->
+    <record model="ir.ui.view" id="family_unspsc_tree">
+        <field name="name">dian.unspsc.family.view.tree</field>
+        <field name="model">dian.unspsc.family</field>
+        <field name="arch" type="xml">
+            <tree string="Familia UNSPSC">
+                <field name="name" />
+                <field name="family" />
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_family_unspsc">
+        <field name="name">Familia UNSPSC</field>
+        <field name="res_model">dian.unspsc.family</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <menuitem name="Familia UNSPSC" id="menu_family_unspsc" parent="account.menu_finance_configuration" action="action_family_unspsc" sequence="100" />
+
+
+    <!-- Menu Segmento productos -->
+    <record model="ir.ui.view" id="segment_unspsc_tree">
+        <field name="name">dian.unspsc.segment.view.tree</field>
+        <field name="model">dian.unspsc.segment</field>
+        <field name="arch" type="xml">
+            <tree string="Segmento UNSPSC">
+                <field name="name" />
+                <field name="segment" />
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_segment_unspsc">
+        <field name="name">Segmento UNSPSC</field>
+        <field name="res_model">dian.unspsc.segment</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <menuitem name="Segmento UNSPSC" id="menu_segment_unspsc" parent="account.menu_finance_configuration" action="action_segment_unspsc" sequence="100" />
+
+
+    <!-- Menu Producto UNSPSC -->
+    <record model="ir.ui.view" id="product_unspsc_tree">
+        <field name="name">dian.unspsc.product.view.tree</field>
+        <field name="model">dian.unspsc.product</field>
+        <field name="arch" type="xml">
+            <tree string="Productos UNSPSC">
+                <field name="product" />
+                <field name="name" />
+                <field name="segment_id" />
+                <field name="family_id" />
+                <field name="class_id" />
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_product_unspsc">
+        <field name="name">Productos UNSPSC</field>
+        <field name="res_model">dian.unspsc.product</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <menuitem name="Productos UNSPSC" id="menu_product_unspsc" parent="account.menu_finance_configuration" action="action_product_unspsc" sequence="100" />
+
+</odoo>

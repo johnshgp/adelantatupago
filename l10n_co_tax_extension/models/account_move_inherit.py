@@ -85,10 +85,10 @@ class AccountMoveInherit(models.Model):
 
 	#@api.one
 	def _get_has_valid_dian_info_JSON(self):
-		if self.journal_id.secure_sequence_id.use_dian_control:
-			remaining_numbers = self.journal_id.secure_sequence_id.remaining_numbers
-			remaining_days = self.journal_id.secure_sequence_id.remaining_days
-			dian_resolution = self.env['ir.sequence.dian_resolution'].search([('sequence_id','=',self.journal_id.secure_sequence_id.id),('active_resolution','=',True)])
+		if self.journal_id.sequence_id.use_dian_control:
+			remaining_numbers = self.journal_id.sequence_id.remaining_numbers
+			remaining_days = self.journal_id.sequence_id.remaining_days
+			dian_resolution = self.env['ir.sequence.dian_resolution'].search([('sequence_id','=',self.journal_id.sequence_id.id),('active_resolution','=',True)])
 			today = datetime.strptime(str(fields.Date.context_today(self)), '%Y-%m-%d')
 
 			not_valid = False
@@ -442,14 +442,14 @@ class AccountMoveInherit(models.Model):
 		self._onchange_invoice_line_ids()
 
 
-	def post(self):
+	def action_post(self):
 		"""
 			Funcion que permite guardar los datos de la resolucion de la factura cuando esta es confirmada
 		"""
-		result = super(AccountMoveInherit, self).post()
+		result = super(AccountMoveInherit, self).action_post()
 
 		for inv in self:
-			sequence = self.env['ir.sequence.dian_resolution'].search([('sequence_id','=',self.journal_id.secure_sequence_id.id),('active_resolution','=',True)], limit=1)
+			sequence = self.env['ir.sequence.dian_resolution'].search([('sequence_id','=',self.journal_id.sequence_id.id),('active_resolution','=',True)], limit=1)
 
 			inv.resolution_number = sequence['resolution_number']
 			inv.resolution_date = sequence['date_from']
