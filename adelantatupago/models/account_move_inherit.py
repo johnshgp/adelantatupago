@@ -10,7 +10,7 @@ class AccountMoveInherit(models.Model):
     pago_tercero_creado = fields.Boolean(string="Pago a tercero creado", default=False)
 
     def pago_tercero(self):
-
+        _logger.warning('Asiganando pago a tercero en Invoice: {0}'.format(self.name))
         if self.pago_tercero_creado:
             return False
 
@@ -54,7 +54,9 @@ class AccountMoveInherit(models.Model):
         
         #Se Valida el asiento contable
         account.action_post()
-
+        
+        _logger.warning('El asiento validado es: {0}'.format(account.name))
+        
         #Se busca la linea a conciliar con la factura
         for line in account.line_ids:
             if line.credit == self.amount_total:
