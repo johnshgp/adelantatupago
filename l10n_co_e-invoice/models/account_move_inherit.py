@@ -74,7 +74,7 @@ class AccountMoveInherit(models.Model):
                 after_state = vals['state']
 
 
-            rec_dian_document = self.env['dian.document'].search([('document_id', '=', invoice)])
+            rec_dian_document = self.env['dian.document'].search([('document_id', '=', invoice.id)])
             if not rec_dian_document:
                 if before_state == 'draft' and after_state == 'posted' and invoice.move_type == 'out_invoice' and not invoice.debit_origin_id:
                     new_dian_document = invoice.env['dian.document'].sudo().create({'document_id' : invoice.id, 'document_type' : 'f'})
