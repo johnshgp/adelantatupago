@@ -365,7 +365,7 @@ class AccountMoveInherit(models.Model):
         document_dian = self.env['dian.document'].search([('document_id', '=', self.id)])
 	
         if not document_dian:
-            if self.state == 'posted' and self.type == 'out_invoice' and self.is_debit_note == False:
+            if self.state == 'posted' and self.move_type == 'out_invoice' and self.is_debit_note == False:
                 document_dian = self.env['dian.document'].sudo().create({'document_id': self.id, 'document_type': 'f'})	
 
         #if document_dian.exist_dian(document_dian.id) == False:
