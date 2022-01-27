@@ -273,4 +273,18 @@
         </field>
     </record>
 
+	<!--	Inherit View Tree  -->
+	<record id="res_country_state_tree_inherit" model="ir.ui.view">
+	    <field name="name">res.country.state</field>
+	    <field name="model">res.country.state</field>
+	    <field name="inherit_id" ref="base.view_country_state_tree"/>
+	    <field name="arch" type="xml">
+
+	        <xpath expr="//field[@name='code']" position="after">
+				<field name="code_dian" required="1"/>
+			</xpath>
+
+	    </field>
+	</record>
+
 </odoo>

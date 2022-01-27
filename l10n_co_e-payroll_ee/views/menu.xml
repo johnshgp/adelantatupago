@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<menuitem
+				id="nomina_electronica_menu"
+				name="Nomina Electronica"
+				parent="hr_work_entry_contract.menu_hr_payroll_configuration"
+				sequence="13"/>
+		<menuitem name="Tipos Devengado" id="accrued_rule_item_menu"
+            parent="l10n_co_e-payroll_ee.nomina_electronica_menu"
+            action="l10n_co_e-payroll.hr_accrued_rule_action"/>
+
+		<menuitem name="Tipos Deducciones" id="deduct_rule_item_menu"
+                parent="l10n_co_e-payroll_ee.nomina_electronica_menu"
+                action="l10n_co_e-payroll.hr_deduct_rule_action"/>
+
+		<menuitem name="Método de Pago" id="payment_method_item_menu"
+                parent="l10n_co_e-payroll_ee.nomina_electronica_menu"
+                action="l10n_co_e-payroll.hr_payment_method_action"/>
+
+		   <menuitem name="Periodo Nomina" id="payroll_period_item_menu"
+                  parent="l10n_co_e-payroll_ee.nomina_electronica_menu"
+                  action="l10n_co_e-payroll.hr_payroll_period_acion"/>
+
+		<menuitem name="Sub Tipo de Trabajo" id="sub_type_worker_item_menu"
+                  parent="l10n_co_e-payroll_ee.nomina_electronica_menu"
+                  action="l10n_co_e-payroll.hr_sub_type_worker_acion"/>
+
+		 <menuitem name="Tipo de Contrato" id="hr_type_contract_item_menu"
+                  parent="l10n_co_e-payroll_ee.nomina_electronica_menu"
+                  action="l10n_co_e-payroll.hr_type_contract_acion"/>
+
+		<menuitem name="Tipo Incapacidad" id="type_inability_item_menu"
+                parent="l10n_co_e-payroll_ee.nomina_electronica_menu"
+                action="l10n_co_e-payroll.hr_type_inability_action"/>
+
+		<menuitem name="Tipo de Notas" id="hr_type_note_item_menu"
+                  parent="l10n_co_e-payroll_ee.nomina_electronica_menu"
+                  action="l10n_co_e-payroll.hr_type_note_acion"/>
+
+		 <menuitem name="Tipo Horas Extras" id="type_overtime_item_menu"
+                parent="l10n_co_e-payroll_ee.nomina_electronica_menu"
+                action="l10n_co_e-payroll.hr_type_overtime_action"/>
+
+		 <menuitem name="Tipo de Trabajador" id="type_worker_item_menu"
+                  parent="l10n_co_e-payroll_ee.nomina_electronica_menu"
+                  action="l10n_co_e-payroll.hr_type_worker_acion"/>
+
+		<menuitem name="Forma de Pago" id="way_pay_item_menu"
+                parent="l10n_co_e-payroll_ee.nomina_electronica_menu"
+                action="l10n_co_e-payroll.hr_way_pay_action"/>
+	</data>
+</odoo>

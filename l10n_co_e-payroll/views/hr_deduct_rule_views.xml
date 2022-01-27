@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="l10n_co_e-payroll.hr_deduct_rule_view_tree" model="ir.ui.view">
+        <field name="name">hr.deduct.rule.tree</field>
+        <field name="model">hr.deduct.rule</field>
+        <field name="arch" type="xml">
+            <tree string="Tipos Deducciones">
+                <field name="code"/>
+                <field name="name"/>
+                <field name="sub_element"/>
+            </tree>
+        </field>
+    </record>
+    <record id="l10n_co_e-payroll.hr_deduct_rule_view_form" model="ir.ui.view">
+        <field name="name">hr.deduct.rule.form</field>
+        <field name="model">hr.deduct.rule</field>
+        <field name="arch" type="xml">
+            <form string="Tipos Deducciones">
+                <group>
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="sub_element"/>
+                </group>
+            </form>
+        </field>
+    </record>
+    <record id="l10n_co_e-payroll.hr_deduct_rule_action" model="ir.actions.act_window">
+        <field name="name">Tipos Deducciones</field>
+        <field name="res_model">hr.deduct.rule</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+</odoo>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <record id="view_hr_payslip_form_inherit" model="ir.ui.view">
+            <field name="inherit_id" ref="hr_payroll.view_hr_payslip_form"/>
+            <field name="model">hr.payslip</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='action_payslip_cancel']" position="after">
+                    <button name="validate" string="Validar DIAN" type="object"
+                            attrs="{'invisible': ['|', ('state', '=', 'draft'), ('state_dian', '=', 'exitoso')]}"/>
+                    <button name="test_xml" string="Test XML" type="object" groups="base.group_no_one"/>
+                </xpath>
+                <xpath expr="//field[@name='note']" position="before">
+                    <label for="note" string="Notas"/>
+                </xpath>
+                <xpath expr="//field[@name='credit_note']" position="attributes">
+                    <attribute name="readonly">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="payroll_period" required="1" attrs="{'readonly': [('state', '=', 'done')]}"
+                           options="{'no_create_edit' : True, 'no_open': True}"/>
+                    <field name="payment_date" required="1" attrs="{'readonly': [('state', '=', 'done')]}"/>
+                </xpath>
+                <xpath expr="//page[last()]" position="after">
+                    <page name="dian" string="DIAN">
+                        <group>
+                            <field name="state_dian"/>
+                            <field name="response_message_dian"/>
+                            <field name="xml_response_dian" attrs="{'invisible' : [('state_dian', '=', 'exitoso')]}"/>
+                            <field name="current_cune" groups="base.group_no_one"/>
+                            <field name="previous_cune" groups="base.group_no_one"
+                                   attrs="{'invisible': [('credit_note', '=', False)]}"/>
+                            <field name="type_note"
+                                   attrs="{'invisible': [('credit_note', '=', False)], 'required': [('credit_note', '=', True)]}"/>
+                        </group>
+                    </page>
+                </xpath>
+                <xpath expr="//button[@name='refund_sheet']" position="replace">
+                    <button
+                            string="Refund"
+                            name="refund_sheet"
+                            attrs="{'invisible': ['|', '|', ('credit_note', '=', True), ('state', '=', 'draft'), ('state_dian', '!=', 'exitoso')]}"
+                            type='object'
+                    />
+                </xpath>
+
+            </field>
+        </record>
+
+        <record id="hr_payslip_tree_inherit" model="ir.ui.view">
+            <field name="name">hr.payslip.inherit.tree</field>
+            <field name="model">hr.payslip</field>
+            <field name="inherit_id" ref="hr_payroll.view_hr_payslip_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='date_to']" position="after">
+                    <field name="state_dian"/>
+                </xpath>
+
+            </field>
+        </record>
+
+
+    </data>
+</odoo>

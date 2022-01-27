@@ -55,3 +55,8 @@ class ResCountryStateCity(models.Model):
 		return result
 		
 ResCountryStateCity()
+
+class ResCountryState(models.Model):
+	_inherit = "res.country.state"
+
+	code_dian = fields.Char(string="Code Dian", size=3, help="Code for dian")

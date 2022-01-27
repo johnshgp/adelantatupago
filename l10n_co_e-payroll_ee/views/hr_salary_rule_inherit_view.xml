@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="inherit_salary_rule_view" model="ir.ui.view">
+        <field name="name">hr_salary_rule</field>
+        <field name="model">hr.salary.rule</field>
+        <field name="inherit_id" ref="hr_payroll.hr_salary_rule_form"></field>
+        <field name="arch" type="xml">
+
+        	<xpath expr="//field[(@name='appears_on_payslip')]" position="after">
+                <field name="type_rule" string="Tipo de Regla"/>
+            </xpath>
+
+            <xpath expr="//field[(@name='active')]" position="after">
+                    <field name="deduccion_rule_id" attrs="{'invisible':[('type_rule','!=','deduccion')],}"/>
+                    <newline/>
+                    <field name="devengado_rule_id" attrs="{'invisible':[('type_rule','!=','devengado')]}"/>
+            </xpath>
+        </field>
+    </record>
+    
+</odoo>

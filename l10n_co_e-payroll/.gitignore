@@ -1,0 +1,7 @@
+*.pyc
+xml/*
+!xml/.keep
+keys/*
+!keys/.keep
+output
+/*.zip

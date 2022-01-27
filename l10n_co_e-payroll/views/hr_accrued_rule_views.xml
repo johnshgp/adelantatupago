@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="l10n_co_e-payroll.hr_accrued_rule_view_tree" model="ir.ui.view">
+        <field name="name">hr.accrued.rule.tree</field>
+        <field name="model">hr.accrued.rule</field>
+        <field name="arch" type="xml">
+            <tree string="Tipos Devengado">
+                <field name="code" />
+                <field name="name" />
+                <field name="sub_element" />
+            </tree>
+        </field>
+    </record>
+    <record id="l10n_co_e-payroll.hr_accrued_rule_view_form" model="ir.ui.view">
+        <field name="name">hr.accrued.rule.form</field>
+        <field name="model">hr.accrued.rule</field>
+        <field name="arch" type="xml">
+            <form string="Tipos Devengado">
+                <group>
+                    <field name="code" />
+                    <field name="name" />
+                    <field name="sub_element" />
+                </group>
+            </form>
+        </field>
+    </record>
+    <record id="hr_accrued_rule_action" model="ir.actions.act_window">
+        <field name="name">Tipos Devengado</field>
+        <field name="res_model">hr.accrued.rule</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+
+    
+</odoo>
