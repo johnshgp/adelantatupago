@@ -46,7 +46,7 @@
                 </xpath> 
 
                 <xpath expr="//field[@name='invoice_payment_term_id']" position="attributes">
-                    <attribute name="required">True</attribute>
+                    <attribute name="required"></attribute>
                 </xpath>
                 <xpath expr="//field[@name='invoice_date_due']" position="attributes">
                     <attribute name="required">False</attribute>
